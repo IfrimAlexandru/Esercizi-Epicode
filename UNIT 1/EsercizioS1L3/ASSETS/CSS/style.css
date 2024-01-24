@@ -1,81 +1,84 @@
-body{
+body {
+    text-align: center;
+    margin: 0;
     font-family: Montserrat;
 }
 
-h2{
+h2 {
     color: rgb(42, 40, 40);
     font-weight: 700;
-    font-size: 40px ;
+    font-size: 40px;
 }
 
-h3{
+h3 {
     font-size: 30px;
 }
-header{
-    text-align: center;
-}
 
-.sottotitolo-logo{
+
+.sottotitolo-logo {
     background-color: rgb(245, 245, 227);
     padding: 15px;
     border-top: 1px solid yellow;
     color: #115152;
     font-size: 20px;
-    }
+}
 
-    .titolo{
-        text-align: center;
-        color: rgb(42, 40, 40);
-        font-size: 50px;
-        margin-top: 80px;
-    }
+.titolo {
+    color: rgb(42, 40, 40);
+    font-size: 50px;
+    margin-top: 80px;
+}
 
-    .sottotitolo{
-        font-size: 20px;
-        font-weight: 500;
-    }
+.sottotitolo {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+}
 
-    main{
-       margin: 0 535px auto;
-    }
+main {
+    width: 50%;
+    margin: 0 auto;
+}
 
-    .focaccia{
-        width: 100%;
-        border-radius: 15px;
-        min-width: 400px ;
-        box-shadow: 5px 5px 5px gray;
-        
-    }
+.focaccia {
+    width: 100%;
+    border-radius: 15px;
+    min-width: 400px;
+    box-shadow: 5px 5px 5px gray;
 
-    .sotto-immagine{
-        text-align: center;
-        color: rgb(128, 118, 118);
-        font-size: 20px;
-    }
+}
 
-    span{
-        color: rgb(186, 116, 36);
-    }
-    
-    .contenitore p{
-        font-size: 20px;
-        border-left: 1px solid yellow;
-        padding-left: 20px;
-        margin-bottom: 40px;
+figcaption {
+    text-align: center;
+    color: rgb(128, 118, 118);
+    font-size: 20px;
+}
 
-    }
+span {
+    color: rgb(186, 116, 36);
+}
 
-    hr{
-        margin-bottom: 30px;
-        
-    }
+.contenitore p {
+    font-size: 20px;
+    border-left: 1px solid yellow;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    text-align: left;
 
-    li{
-        font-size: 20px;
-        padding: 10px;
-        font-weight: 500;
-    }
+}
 
-    .last{
-        font-size: 20px;
-    }
+hr {
+    margin-bottom: 30px;
+
+}
+
+li {
+    text-align: left;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.last {
+    font-size: 20px;
+}
