@@ -47,6 +47,10 @@ nav ul li a::before{
 
 /*MAIN*/
 
+.esempio{
+    color: #a89e9e;
+}
+
 .main{
     background-color: white;
     margin: 20px;
@@ -67,6 +71,11 @@ code{
     border-radius: 5px;
     border: 1px solid grey;
 }
+
+section h2 p, section h2 a{
+    color: #8e8787;
+}
+
 /*TABELLA*/
 
 caption{
@@ -83,6 +92,9 @@ thead{
     color: white;
 }
 
+.tabella tr:nth-child(even){
+    background-color: #e0d3d3 ;
+}
 thead th{
     font-weight: 400;
     padding: 10px;
@@ -99,7 +111,7 @@ tbody td{
 }
 
 p a{
-    color: #3F6ACA;
+    color: #32bcde;
 }
 
 
@@ -147,7 +159,12 @@ button{
     padding: 5px;
     border: none;
     height: 24px;
+    cursor: pointer;
     
+}
+
+button:hover{
+    background-color: #444;
 }
 
 /*Articoli correlati*/
@@ -157,6 +174,9 @@ button{
     text-transform: uppercase;
 }
 
+.contenuto-finale a{
+    color: #32bcde;
+}
 .Articoli .contenuto-finale{
     width: 100%;
     background-color: #E3E3E3;
@@ -170,6 +190,8 @@ button{
 .Articoli .contenuto-finale .data{
     text-align: right;
 }
+
+/*FOOTER*/
 
 footer{
     background-image: linear-gradient(to bottom, #299EC5 0%, #0b5b74 60%);
