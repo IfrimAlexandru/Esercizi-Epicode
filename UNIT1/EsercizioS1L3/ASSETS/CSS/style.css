@@ -43,8 +43,11 @@ main {
 .focaccia {
     width: 100%;
     border-radius: 15px;
-    min-width: 400px;
     box-shadow: 5px 5px 5px gray;
+}
+
+figure{
+    margin: 0px;
 }
 
 figcaption {
@@ -80,4 +83,8 @@ li {
 
 .last {
     font-size: 20px;
+}
+
+.link{
+    color: rgb(24, 109, 87);
 }
