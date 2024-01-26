@@ -1,0 +1,119 @@
+html, body{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    color: #393d41;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #25a2c3;
+}
+
+footer {
+    color: white;
+}
+
+.logo{
+    width: 100%;
+    background-color: black;
+    padding: 40px;
+}
+
+.logo img{
+    width: 240px;
+}
+
+.sotto-logo{
+    
+    padding: 20px;
+    background-image: url(/UNIT1/EsercizioS1L5/ASSETS/IMG/banner.jpg);
+    
+}
+
+
+header{
+    line-height: 1.5;
+}
+
+header button{
+    background-color: #e72a09;
+    color: white;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 3px;
+    border: none;
+    font-family: Montserrat;
+}
+
+/*MAIN*/
+
+.img-notebook{
+    border-radius: 50%;
+}
+
+.epicode-garantisce{
+    background-color: #E72A09;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin-bottom: 80px;
+}
+
+.epicode-garantisce h2{
+    color: white;
+    font-weight: bold;
+    margin: 0;
+}
+
+/*SCHEDA*/
+
+
+    
+.scheda{
+    border: 1px solid #dee1e3;
+    width: 33%;
+    margin: 0 auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+
+}
+
+.scheda img{
+    max-width: 100%;
+}
+
+/*FOOTER*/
+
+.contattaci{
+    background-color: #25a2c3;
+    
+}
+
+.contatti{
+    margin-bottom: 30px;
+}
+
+.contatti a, .contatti p{
+    color: white;
+    display: block;
+}
+
+footer h2{
+    color: white;
+}
+
+
+.contattaci p{
+    border-bottom: 1px solid white;
+}
+.contatti p{
+    margin: 0px;
+    padding: 0px;
+}
+   
