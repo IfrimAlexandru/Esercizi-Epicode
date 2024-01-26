@@ -95,21 +95,27 @@ header button{
     
 }
 
+footer a, footer p, footer h2{
+    color: white;
+}
 .contatti{
     margin-bottom: 30px;
+    width: 20%;
+    margin: 0 auto;
 }
 
 .contatti a, .contatti p{
-    color: white;
+    
     display: block;
 }
 
-footer h2{
-    color: white;
+footer{
+    padding: 20px;
 }
 
 
-.contattaci p{
+.contatti p{
+    padding-bottom: 20px;
     border-bottom: 1px solid white;
 }
 .contatti p{
