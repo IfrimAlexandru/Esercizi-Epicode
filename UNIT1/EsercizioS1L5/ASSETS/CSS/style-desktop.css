@@ -1,4 +1,5 @@
-html, body{
+html,
+body {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -9,13 +10,18 @@ html, body{
     color: #393d41;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     color: #25a2c3;
 }
 
-header{
+header {
     line-height: 1.5;
 }
 
@@ -24,36 +30,36 @@ footer {
     color: white;
 }
 
-.logo{
-    
+.logo {
+
     background-color: black;
     padding: 60px;
 }
 
-.logo img{
+.logo img {
     width: 300px;
     text-align: left;
 }
 
-.sotto-logo{
+.sotto-logo {
     font-size: larger;
     text-align: center;
     padding-top: 200px;
     background-image: url(/UNIT1/EsercizioS1L5/ASSETS/IMG/banner.jpg);
     background-repeat: no-repeat;
-    background-size: cover ;
-    
+    background-size: cover;
+
     height: 900px;
 }
 
-.sotto-logo p{
+.sotto-logo p {
     margin: 0 auto;
     width: 42%;
 }
 
 
 
-header button{
+header button {
     background-color: #e1533a;
     color: white;
     font-weight: bold;
@@ -67,129 +73,129 @@ header button{
 
 /*MAIN*/
 
-article{
+article {
     margin: 0 auto;
     padding-left: 500px;
 }
 
-main{
+main {
     text-align: center;
-    
-    
 }
 
 
-
-.img-notebook img{
+.img-notebook img {
     margin-left: 200px;
     border-radius: 50%;
 }
 
-.ex{
+.ex {
     text-align: left;
     margin-left: 50px;
 }
 
-article{
+article {
     display: flex;
     align-items: center;
 }
 
-.img-notebook{
-    flex: 0 0 auto;
-    margin-right: 20px; 
+.img-notebook {
+    margin-right: 40px;
 }
 
-.container{
-    
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex: 1; 
-        
-        
-    
+.container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
 }
 
 
-
-
-.epicode-garantisce{
+.epicode-garantisce {
     background-color: #E72A09;
     color: rgb(255, 255, 255);
     padding: 20px;
     margin-bottom: 80px;
     margin-left: 0px;
     margin-right: 0px;
-    
 }
 
-.epicode-garantisce h2{
+.epicode-garantisce h2 {
     color: white;
     font-weight: bold;
-   
-
 }
 
 /*SCHEDA*/
 
+.schede {
+    padding-bottom: 200px;
+}
 
-    
-.scheda{
+.scheda {
     border: 1px solid #dee1e3;
-    width: 80%;
+    width: 25%;
     margin: 0 auto;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    margin-bottom: 40px;
-    
-
-
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
-.scheda img{
+.scheda p {
+    padding: 0 45px;
+}
+
+.scheda h3 {
+    margin-top: 200p
+}
+
+.scheda img {
     max-width: 100%;
     width: 100%;
-    display: block;
-    box-sizing: border-box;
+    max-height: 16em;
+    background-size: cover;
 }
 
 /*FOOTER*/
 
-.contattaci{
+.contattaci {
     text-align: center;
     padding: 20px;
     padding-bottom: 60px;
-    
     background-color: #25a2c3;
 }
-    
-    
 
-.contattaci a, .contattaci p, .contattaci h2{
+
+
+.contattaci a,
+.contattaci p,
+.contattaci h2 {
     color: white;
 }
-.contatti{
+
+.contatti {
     margin-bottom: 30px;
     margin: 0 auto;
 }
 
-.contatti a, .contatti p{
-    
+.contatti a,
+.contatti p {
+
     display: block;
 }
 
 
-.contatti p{
+.contatti p {
     margin: 0px;
-    padding:0px;
+    padding: 0px;
     padding-bottom: 40px;
 }
 
-.contattaci > p{
+.contattaci>p {
     margin: 0 auto;
-    width: 70%;
+    width: 10%;
     border-top: 1px solid white;
     padding: 40px;
 }
-   
