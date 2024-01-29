@@ -6,7 +6,7 @@ html, body{
 }
 
 body{
-    background-image: url(/UNIT1/EsercizioS1L4/ASSETS/IMG/sfondo.png);
+    background-image: url(../IMG/sfondo.png);
     background-size: auto;
 }
 

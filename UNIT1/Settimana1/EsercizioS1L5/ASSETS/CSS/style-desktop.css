@@ -45,7 +45,7 @@ footer {
     font-size: larger;
     text-align: center;
     padding-top: 200px;
-    background-image: url(/UNIT1/EsercizioS1L5/ASSETS/IMG/banner.jpg);
+    background-image: url(../IMG/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
