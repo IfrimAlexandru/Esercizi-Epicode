@@ -7,11 +7,13 @@ REGOLE
 - Utilizza dei console.log() per testare le tue variabili e/o i risultati delle espressioni che stai creando.
 */
 
+
+
 /* ESERCIZIO 1
  Elenca e descrivi i principali datatype in JavaScript. Prova a spiegarli come se volessi farli comprendere a un bambino.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* RISPOSTA */
 
 /*
 
