@@ -17,6 +17,7 @@ if (numero1 > numero2) {
 console.log("Il numero più grande è:", numeroMaggiore);
 
 
+
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
@@ -115,7 +116,7 @@ if (totalShoppingCart_1 > 50) {
 
 /* RISPOSTA */
 
-let totalShoppingCart_2 = 30;
+let totalShoppingCart_2 = 120;
 let ScontoBlackFriday = 0.2;
 let costoSpedizione_2 = 10;
 let Sconto = totalShoppingCart_2 * ScontoBlackFriday;
@@ -125,6 +126,9 @@ if (totalShoppingCart_2 - Sconto > 50) {
 } else {
   console.log("Totale da pagare = ", totalShoppingCart_2 - Sconto + costoSpedizione)
 }
+
+
+
 
 
 
@@ -140,7 +144,7 @@ if (totalShoppingCart_2 - Sconto > 50) {
 
 
 let numero1es7 = 109;
-let numero2es7 = 14;
+let numero2es7 = 70;
 let numero3es7 = 64;
 
 if (numero1es7 < numero2es7) {
@@ -161,7 +165,16 @@ if (numero2es7 < numero3es7) {
   numero3es7 = temp;
 }
 
-console.log("Numeri ordinati in ordine decrescente:", numero1es7, numero2es7, numero3es7);
+console.log("Numeri in ordine decrescente:", numero1es7, numero2es7, numero3es7);
+
+
+/* OPPURE */
+
+let numeri = [3, 12, 9];
+numeri.sort((a, b) => b - a);
+
+
+console.log("Numeri in ordine decrescente:", numeri);
 
 
 
@@ -178,6 +191,8 @@ if (typeof numeroes8 === "number") {
 } else {
   console.log("Il valore fornito NON è un numero")
 }
+
+
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
@@ -198,6 +213,8 @@ if (numeroes9 % 2 === 0) {
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
+  
+  
   let val = 7
   if (val < 10) {
       console.log("Meno di 10");
@@ -206,6 +223,7 @@ if (numeroes9 % 2 === 0) {
     } else {
       console.log("Uguale a 10 o maggiore");
     }
+
 */
 
 /*  RISPOSTA */
@@ -224,6 +242,7 @@ let val = 3
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
 */
 
+/*
 const me = {
   name: 'John',
   lastName: 'Doe',
@@ -231,6 +250,7 @@ const me = {
 }
 
 console.log(me);
+*/
 
 /* RISPOSTA */
 
@@ -274,10 +294,8 @@ console.log(me1)
 
 
 let Numeri = [];
+Numeri.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-for (let i = 1; i <= 10; i++) {
-  Numeri.push(i); 
-}
 
 console.log(Numeri);
 
@@ -289,6 +307,6 @@ console.log(Numeri);
 
 /* RISPOSTA */
 
-Numeri[Numeri.length - 1] = 100;
+Numeri[9] = 100;
 console.log(Numeri);
 
