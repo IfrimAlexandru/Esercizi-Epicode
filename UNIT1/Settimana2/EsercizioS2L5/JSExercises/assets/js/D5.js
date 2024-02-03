@@ -271,11 +271,8 @@ function posizioniAlfabetoItaliano(alfabeto) {
         posizione.push(26);
         break;
       default:
-        posizione = console.log("Puoi inserire soltanto lettere dell'alfabeto italiano!!!");
-        break;
-
-
-    }
+        console.log("Puoi inserire soltanto lettere dell'alfabeto italiano!!!");
+        break;}
   }
   return posizione;
 }

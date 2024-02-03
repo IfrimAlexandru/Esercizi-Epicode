@@ -23,12 +23,11 @@ console.log("Il numero più grande è:", numeroMaggiore);
 */
 
 /* RISPOSTA */
-
-let numeroes2 = 17;
+numeroes2 = parseInt(prompt("Inserisci un numero"))
 
 if (numeroes2 !== 5) {
   console.log("not equal");
-}
+} else console.log(numeroes2 + " è uguale a 5");
 
 
 
@@ -37,8 +36,8 @@ if (numeroes2 !== 5) {
 */
 
 /* RISPOSTA */
+numeroes3 = parseInt(prompt("Inserisci un numero"))
 
-let numeroes3 = 20;
 let resto = numeroes3 % 5;
 
 if (numeroes3 % 5 === 0) {
@@ -83,13 +82,13 @@ if (numero1es4 === 8 ||
 
 /*  RISPOSTA */
 
-let totalShoppingCart = 60;
+let totalShoppingCart = 20;
 let costoSpedizione = 10;
 
 if (totalShoppingCart > 50) {
   console.log("La spedizione è gratuita! Totale da pagare = " + totalShoppingCart)
 } else {
-  console.log("Totale da pagare = " , totalShoppingCart + costoSpedizione )
+  console.log("Totale da pagare = " + (totalShoppingCart + costoSpedizione) )
 }
 
 
@@ -117,14 +116,14 @@ if (totalShoppingCart_1 > 50) {
 /* RISPOSTA */
 
 let totalShoppingCart_2 = 120;
-let ScontoBlackFriday = 0.2;
+let ScontoBlackFriday = 0.8;
 let costoSpedizione_2 = 10;
-let Sconto = totalShoppingCart_2 * ScontoBlackFriday;
 
-if (totalShoppingCart_2 - Sconto > 50) {
-  console.log("La spedizione è gratuita! Totale da pagare = " , totalShoppingCart_2 - Sconto)
+
+if ((totalShoppingCart_2 * ScontoBlackFriday) > 50) {
+  console.log("La spedizione è gratuita! Totale da pagare = " + (totalShoppingCart_2 * ScontoBlackFriday))
 } else {
-  console.log("Totale da pagare = ", totalShoppingCart_2 - Sconto + costoSpedizione)
+  console.log("Totale da pagare = " +4 (totalShoppingCart_2 * ScontoBlackFriday) + costoSpedizione)
 }
 
 
@@ -143,30 +142,28 @@ if (totalShoppingCart_2 - Sconto > 50) {
 /*  RISPOSTA */
 
 
-let numero1es7 = 109;
-let numero2es7 = 70;
-let numero3es7 = 64;
+let a1 = 109;
+let b1 = 70;
+let c1 = 64;
 
-if (numero1es7 < numero2es7) {
-  let temp = numero1es7;
-  numero1es7 = numero2es7;
-  numero2es7 = temp;
-}
-
-if (numero1es7 < numero3es7) {
-  let temp = numero1es7;
-  numero1es7 = numero3es7;
-  numero3es7 = temp;
-}
-
-if (numero2es7 < numero3es7) {
-  let temp = numero2es7;
-  numero2es7 = numero3es7;
-  numero3es7 = temp;
-}
-
-console.log("Numeri in ordine decrescente:", numero1es7, numero2es7, numero3es7);
-
+if (a1 >= b1 && a1 >= c1 && b1 >= c1) {
+    console.log(a1, b1, c1)
+} else
+if (a1 >= b1 && a1 >= c1 && c1 >= b1) {
+    console.log(a1, c1, b1)
+} else
+if (b1 >= a1 && b1 >= c1 && a1 >= c1) {
+ console.log(b1, a1, c1 )
+} else
+if (b1 >= a1 && b1 >= c1 && c1 >= a1) {
+    console.log(b1, c1, a1 )
+} else
+if (c1 >= a1 && c1 >= b1 && b1 >= a1) {
+    console.log(c1, b1, a1 )
+} else
+if (c1 >= a1 && c1 >= b1 && a1 >= b1) {
+    console.log(c1, a1, b1 )
+} 
 
 /* OPPURE */
 
@@ -271,7 +268,7 @@ console.log(me1);
 
 /*  RISPOSTA */
 
-delete me1.lastName;  /*serve a rimuovere una proprietà */
+delete me1.lastName;  
 
 console.log(me1);
 
@@ -281,8 +278,8 @@ console.log(me1);
 
 /* RISPOSTA */
 
-me1.skills.pop()     /*serve a rimuovere l'ultimo elemento di una proprietà */
-me1.skills.shift()   /*serve a rimuovere il primo elemento di una proprietà */
+me1.skills.pop()     
+
 
 console.log(me1)
 
@@ -310,5 +307,11 @@ console.log(Numeri);
 /* RISPOSTA */
 
 Numeri[9] = 100;
+console.log(Numeri);
+
+/* OPPURE */
+
+Numeri.pop();
+Numeri.push(100);
 console.log(Numeri);
 

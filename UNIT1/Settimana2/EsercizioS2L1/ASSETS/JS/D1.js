@@ -94,8 +94,6 @@ console.log(x)
 let myName2 = "Alexandru";
 myName2 = "Ifrim";
 console.log(myName2);
-
-
 /*const myName3 = "Alexandru";
 myName3 = "Ifrim";*/   /* in questo caso troverò un errore nella console "Assignement to constant variable" */
 
