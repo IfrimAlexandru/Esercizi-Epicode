@@ -175,7 +175,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
     case 'red':
       eyeColor.red.push(starWarsCharacters[i]);
       break;
-    default: eyeColor['blue-gray'].push(starWarsCharacters[i]);
+    default: eyeColor["blue-gray"].push(starWarsCharacters[i]);
       break;
   }
 }
@@ -245,6 +245,20 @@ console.log(starWarsCharacters);
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
+console.log("ESERCIZIO 9")
+
+console.log(charactersNames);
+
+for (let i=0; i < charactersNames.length; i++){
+  for (let f = 0; f < femaleCharacters.length; f++) {
+		if(femaleCharacters[f].name === charactersNames[i]) {
+			charactersNames.splice(i, 1);
+		}
+	}
+}
+
+console.log(charactersNames);
+
 
 
 
