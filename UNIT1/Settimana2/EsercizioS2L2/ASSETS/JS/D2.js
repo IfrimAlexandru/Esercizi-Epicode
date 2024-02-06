@@ -23,7 +23,7 @@ console.log("Il numero più grande è:", numeroMaggiore);
 */
 
 /* RISPOSTA */
-numeroes2 = parseInt(prompt("Inserisci un numero"))
+/*numeroes2 = parseInt(prompt("Inserisci un numero"))
 
 if (numeroes2 !== 5) {
   console.log("not equal");
@@ -36,7 +36,7 @@ if (numeroes2 !== 5) {
 */
 
 /* RISPOSTA */
-numeroes3 = parseInt(prompt("Inserisci un numero"))
+/*numeroes3 = parseInt(prompt("Inserisci un numero"))
 
 let resto = numeroes3 % 5;
 
@@ -115,15 +115,18 @@ if (totalShoppingCart_1 > 50) {
 
 /* RISPOSTA */
 
-let totalShoppingCart_2 = 120;
-let ScontoBlackFriday = 0.8;
+
+let totalShoppingCart_2 = 123;
+let ScontoBlackFriday;
+ScontoBlackFriday = 1-(20 / 100);
 let costoSpedizione_2 = 10;
 
 
+
 if ((totalShoppingCart_2 * ScontoBlackFriday) > 50) {
-  console.log("La spedizione è gratuita! Totale da pagare = " + (totalShoppingCart_2 * ScontoBlackFriday))
+  console.log("La spedizione è gratuita! Totale da pagare = " + (totalShoppingCart_2 * ScontoBlackFriday) + "$")
 } else {
-  console.log("Totale da pagare = " +4 (totalShoppingCart_2 * ScontoBlackFriday) + costoSpedizione)
+  console.log("Totale da pagare = " + ((totalShoppingCart_2 * ScontoBlackFriday) + costoSpedizione) + "$")
 }
 
 

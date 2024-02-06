@@ -281,3 +281,5 @@ const charactersArray = ["b", "b", "t", "x",];
 
 const arrayRisultato = posizioniAlfabetoItaliano(charactersArray);
 console.log(arrayRisultato);
+
+
