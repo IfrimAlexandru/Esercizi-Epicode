@@ -1,0 +1,44 @@
+
+
+.form{
+    
+    text-align: center;
+    border: 2px solid rgb(164, 146, 146);
+    width: 800px;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 500px;
+    background-color: rgb(158, 188, 253);
+    height: 400px;
+}
+
+.input{
+    margin-top: 20px;
+    text-align: center;
+    width: 600px;
+    height: 40px;
+    font-size: 20px;
+    
+}
+
+.button{
+    font-size: 15px;
+    height: 45px;
+    width:130px;
+    color: rgb(11, 37, 74);
+    font-weight: bold;
+    border-radius: 10px;
+    padding-left: px;
+    background-color: rgb(151, 151, 213);
+
+    
+}
+
+ul{
+    padding-left: 50px;
+}
+ul li{
+    font-size: 25px;
+    text-align: left;
+    
+}

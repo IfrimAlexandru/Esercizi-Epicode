@@ -1,0 +1,435 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../IMG/sfondo.png);
+    background-size: auto;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+section p b {
+    color: rgb(161, 72, 127);
+}
+
+/*HEADER*/
+
+.header {
+    color: white;
+    margin: 20px;
+    box-shadow: 0 3px 3px #444;
+    text-align: center;
+    background-image: linear-gradient(to top, #299EC5 0%, #196D86 60%);
+    padding: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header img {
+    margin-top: 13px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: chocolate;
+}
+
+nav ul li a::before {
+    content: "\22c6\0020";
+}
+
+.logoHTML5 {
+    width: 70px;
+    height: 70px;
+    border: 4px solid rgb(161, 72, 127);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logoHTML5 img {
+    width: 65px;
+    height: 65px;
+    border: 3px solid rgb(92, 92, 224);
+}
+
+/*MAIN*/
+
+.esempio {
+    color: #a89e9e;
+}
+
+.main {
+    background-color: white;
+    margin: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 3px 3px #444;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.main section h2 {
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+
+.main section article h2 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+h3 {
+    font-weight: 400;
+
+}
+
+code {
+    background-color: #ebebeb;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+section h2 p,
+section h2 a {
+    color: #8e8787;
+}
+
+
+/*TABELLA*/
+
+caption {
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.tabella {
+    border-collapse: collapse;
+    width: 400px;
+}
+
+thead {
+    background-color: #3F6ACA;
+    color: white;
+}
+
+.tabella tr:nth-child(even) {
+    background-color: #fdf2f2;
+}
+
+thead th {
+    font-weight: 400;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+tbody {
+    border-bottom: 3px solid #3F6ACA;
+    color: black;
+    font-weight: 500;
+}
+
+tbody td {
+    text-align: center;
+    padding: 15px 40px;
+}
+
+p a {
+    color: #32bcde;
+}
+
+
+
+
+/*VIDEO*/
+
+.video {
+
+    margin: 0 auto;
+
+}
+
+iframe {
+    border-radius: 30px;
+    width: 100%;
+    height: 170px;
+}
+
+/*NOVITà*/
+
+.novità {
+    margin-top: 30px;
+    background-color: #E3E3E3;
+    padding: 20px;
+    color: rgb(46, 43, 43);
+
+}
+
+.novità h2 {
+    margin: 0px;
+    background-color: rgb(191, 191, 191);
+    text-align: center;
+    font-weight: 600;
+    /*text-transform: uppercase;*/
+}
+
+.novità p {
+    font-size: 17px;
+}
+
+form input {
+    border-bottom-style: dashed;
+    height: 25px;
+    width: 200px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+button {
+    background-color: #3F6ACA;
+    color: white;
+    padding: 5px;
+    border: none;
+    height: 25px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: #444;
+}
+
+/*Articoli correlati*/
+.Articoli {
+    padding-bottom: 30px;
+}
+
+aside h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin: 40px 30px;
+}
+
+.contenuto-finale {
+    margin: 15px 0;
+}
+
+.contenuto-finale p a {
+    color: #32bcde;
+}
+
+.contenuto-finale p {
+    margin: 0px;
+}
+
+.Articoli .contenuto-finale {
+    width: 100%;
+    background-color: #E3E3E3;
+    box-sizing: border-box;
+    border: 1px solid rgb(176, 174, 174);
+    padding: 10px;
+
+}
+
+.Articoli .contenuto-finale .data {
+    text-align: right;
+}
+
+/*FOOTER*/
+
+footer {
+    background-image: linear-gradient(to bottom, #299EC5 0%, #0b5b74 60%);
+    margin: 20px;
+    color: white;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    font-size: 20px;
+    box-shadow: 0 3px 3px #444;
+
+}
+
+footer p a {
+    color: rgb(180, 43, 180);
+    font-weight: bold;
+
+}
+
+
+
+/*RESPONSIVE*/
+@media screen and (min-width: 768px) {
+    main section h2 {
+        width: 80%;
+    }
+
+    main .tabella {
+        margin: 70px auto;
+        width: 500px;
+
+
+    }
+
+    article h3 {
+        font-weight: 600;
+    }
+
+
+
+    form input {
+
+        width: 600px;
+        height: 35px;
+    }
+
+
+
+    button {
+        height: 35px;
+        width: 100px;
+        padding: 10px;
+    }
+
+
+    iframe {
+        height: 180px;
+    }
+
+
+    section {
+        margin: 20px;
+    }
+
+    .main {
+        padding: 20px 20px;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .header img,
+    .header nav,
+    .header p {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .header {
+        height: 71px;
+        margin: 10px auto;
+        width: 80%;
+        text-align: left;
+        position: relative;
+
+    }
+
+    .header nav {
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+    }
+
+    .header img {
+        margin: 0;
+    }
+
+    .main {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .main section h2 {
+        font-size: 2.5em;
+    }
+
+    main .tabella {
+        width: 730px;
+    }
+
+    footer {
+        bottom: 0px;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .video {
+        display: inline-block;
+        width: 47%;
+        vertical-align: middle;
+        height: 200px;
+    }
+
+    .video iframe {
+        display: inline-block;
+        height: 200px;
+
+    }
+
+    .novità {
+        width: 47%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 0;
+        border-radius: 15px;
+        height: 160px;
+    }
+
+    .Articoli .contenuto-finale {
+        width: 33%;
+        display: inline-block;
+        margin: 0 auto;
+
+    }
+
+    div .Articoli {
+        margin: 0 auto;
+    }
+
+    form input {
+
+        width: 300px;
+        height: 35px;
+    }
+}
+
+@media print {
+    footer, header, .video, .novità, .Articoli{
+     display: none;   
+    } 
+
+    .main section h2{
+        font-size: 20px;
+    }
+}

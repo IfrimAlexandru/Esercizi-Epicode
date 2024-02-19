@@ -1,0 +1,53 @@
+body{
+	background-color: rgb(206, 206, 107);
+}
+
+.classeDiv{
+	border: 1px solid black;
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	position: relative;
+	margin: 2px;
+	
+	
+}
+
+.classeDiv span{
+	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: 700;
+	
+
+}
+
+main div{
+	margin: 0 auto;
+}
+
+.buttonClass{
+height: 50px;
+width: 160px;
+font-weight: bold;
+font-size: 20px;
+
+}
+
+main{
+	width: 44%;
+	margin: 0 auto;
+}
+
+.numeroUscito{
+	background-color: rgb(196, 139, 14);
+}
+
+.titolo{
+	text-align: center;
+	font-size: 50px;
+	color: brown;
+}
+

@@ -14,7 +14,6 @@ function stringheConcatenate(stringa1, stringa2) {
   let risultato = operazioneStringa1 + operazioneStringa2;
   risultato = risultato.toUpperCase();
   return risultato;
-
 }
 
 let risultato = stringheConcatenate(stringa1, stringa2);
@@ -348,6 +347,17 @@ console.log(sommaAnni);
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
+
+/*RISPOSTA*/
+const elenco = document.getElementById("elenco");
+movies.forEach(i =>{
+  let option = document.createElement("option");
+  option.setAttribute("value", i.imdbID);
+  option.innerText = i.Title;
+  elenco.appendChild(option);
+});
+
+
 
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.

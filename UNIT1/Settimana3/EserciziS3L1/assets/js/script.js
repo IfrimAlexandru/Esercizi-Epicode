@@ -3,8 +3,7 @@
   */
 
 /* RISPOSTA */
-
-const changeTitle = function (nuovoTitolo) {
+function changeTitle (nuovoTitolo) {
     document.querySelector("h1").innerText = nuovoTitolo;
 };
 
@@ -16,9 +15,10 @@ changeTitle("Esercizi DOM Traversing e DOM Manupulation");
 
 /* RISPOSTA */
 
-const addClassToTitle = function () {
+ function addClassToTitle () {
     const titolo = document.querySelector("h1");
     titolo.classList.add("myHeading");
+    return;
 };
 
 addClassToTitle();
@@ -27,23 +27,31 @@ addClassToTitle();
  Scrivi una funzione che cambi il testo dei p figli di un div
 */
 
-const changePcontent = function () {
-
+function changePcontent (nuovoTesto) {
+    document.querySelectorAll(" div > p").forEach(p => p.textContent = nuovoTesto);
+    return;
 }
+
+changePcontent("nuovo testo paragrafo")
 
 /* ESERCIZIO 4
  Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
 */
 
-const changeUrls = function () { 
-
+function cambioLink() {
+    document.querySelectorAll("a :not(footer) a").forEach(link => {
+        link.href = "https://www.google.com";
+    });
+    return;
 }
+cambioLink();
+
 
 /* ESERCIZIO 5
  Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
 */
 
-const addToTheSecond = function () {
+ function addToTheSecond () {
     const secondaLista = document.getElementById("secondList");
     const elementoLista = document.createElement("li");
 
@@ -72,7 +80,7 @@ addParagraph();
  Scrivi una funzione che faccia scomparire la prima lista non ordinata
 */
 
-const hideFirstUl = function () { 
+function hideFirstUl () {
     const primaLista = document.getElementById("firstList");
     primaLista.style.display = "none";
 
@@ -83,25 +91,40 @@ hideFirstUl()
  Scrivi una funzione che renda verde il background di ogni lista non ordinata
 */
 
-const paintItGreen = function () { 
+const paintItGreen = function () {
     const liste = document.querySelectorAll("ul");
-    for (i=0; i<liste.length; i++ )
-    liste[i].setAttribute("style", "background-color: green;")
+    for (i = 0; i < liste.length; i++)
+        liste[i].setAttribute("style", "background-color: green;")
 }
 paintItGreen()
 /* ESERCIZIO 9
  Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
 */
 
-const makeItClickable = function () { 
-
+ function makeItClickable () {
+const titolo = document.querySelector("h1");
+titolo.addEventListener("click", function(){
+    const testoAttuale = titolo.textContent;
+    const nuovoTesto = testoAttuale.slice(0, -1);
+    titolo.textContent = nuovoTesto;
+    
+});
+titolo.style.cursor = "pointer";
 }
+makeItClickable ();
 
 /* ESERCIZIO 10
  Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
 */
 
-const revealFooterLink = function () { 
+/*function revealFooterLink () {
+const footer = document.querySelector("footer");
+footer.style.cursor = "pointer";
+footer.addEventLink("click", function () {
+    const footerLinkA = document.querySelector("footer a");
+    const footerLink = footerLinkA.getAttribute("href");
+    alert(footerLink);
+});
 
 }
 
@@ -110,7 +133,7 @@ const revealFooterLink = function () {
  La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
 */
 
-const generateTable = function () { 
+const generateTable = function () {
 
 }
 
@@ -131,3 +154,6 @@ Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un color
 */
 
 const changeColorWithRandom = function () { }
+
+
+
