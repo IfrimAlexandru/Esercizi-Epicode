@@ -1,0 +1,61 @@
+body {
+    text-align: center;
+    font-family: "Indie Flower", cursive;
+    background-color: #666666;
+}
+
+#contenitoreBody {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.postGiallo,
+.postVerde,
+.postViola {
+    width: 18%;
+    border: none;
+    height: 150px;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 30px 0px rgb(41, 36, 36);
+}
+
+h2 {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+p {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.postGiallo {
+    background: linear-gradient(to bottom, #F8F8C6, #BDBEA2);
+    rotate: -5deg;
+    transition-duration: 0.5s;
+}
+
+
+.postVerde {
+    background: linear-gradient(to bottom, #d9ff93, #BDBEA2);
+    rotate: 7deg;
+    transition-duration: 0.5s;
+}
+
+.postViola {
+    background: linear-gradient(to bottom, #c0bbfe, #c6baff);
+    rotate: -8deg;
+    transition-duration: 0.5s;
+}
+
+
+.postGiallo:hover, .postVerde:hover, .postViola:hover{
+    
+    scale: 1.2;
+    rotate: 0deg;
+}

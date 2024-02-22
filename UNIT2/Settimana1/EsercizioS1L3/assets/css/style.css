@@ -62,7 +62,6 @@ nav>div {
 #titoloSection1 h2{
     font-size: 2.6em;
     font-weight: 800;
-
 }
 
 .card div img{
@@ -102,6 +101,8 @@ nav>div {
 
 .card{
     margin-top: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Article */
@@ -133,4 +134,120 @@ aside h3{
 
 aside article{
     padding: 10px 30px;
+}
+
+@media screen and (min-width:576px){
+    
+    /* NAV */
+    nav{
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        align-items: center;
+        border-radius: 0px;
+        
+
+    }
+ 
+    .bottoni{
+        width: 120px;
+        border-radius: 50px;
+        height: 25px;
+        margin: 3px;
+    }
+
+    #titolo{
+        width: 130px;
+    }
+
+    nav h3{
+        font-size: 13px;
+    }
+
+    nav h1{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    html, body{
+        padding: 0;
+    }
+   aside, main{
+    margin: 0 30px
+   }
+
+   #titolo{
+    order: 3;
+   }
+
+   #btn1{
+    order: 1;
+   }
+
+   #btn2{
+    order: 2;
+   }
+
+   #btn4{
+    order: 4;
+   }
+
+   #btn5{
+    order: 5;
+   }
+
+   /* PRODUCTS */
+
+   #titoloSection1{
+    font-size: 12px;
+    text-align: left;
+   }
+
+   section{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   }
+
+   .card{
+    width: 48%;
+}
+
+   .card:last-child{
+    display: none;
+   }
+
+   
+}
+
+
+@media screen and (min-width:768px){
+
+#contenitoreBody{
+    display: flex;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.bottoni, #titolo{
+    width: 140px;
+    height: 60px;
+}
+
+#titolo{
+    order: 1;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+}
+
+.card:last-child{
+    display: none;
+}
+
 }
