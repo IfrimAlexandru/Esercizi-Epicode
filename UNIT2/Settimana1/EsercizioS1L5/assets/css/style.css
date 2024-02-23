@@ -1,0 +1,296 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+
+}
+
+main{
+    width: 100%;
+}
+nav {
+    padding: 20px 60px;
+    display: flex;
+    width: 100%;
+    background-color: #FBC018;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    font-weight: 400;
+    
+}
+
+.divLinkNav {
+    display: flex;
+
+}
+
+.divLinkNav div {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.divImgNav {
+    display: flex;
+    cursor: pointer;
+}
+
+.divImgNav img {
+    align-items: center;
+}
+
+.getStarted {
+    justify-content: center;
+    background-color: black;
+    color: white;
+    border-radius: 99em;
+    padding: 8px 16px;
+    text-align: center;
+    display: inline-block;
+    font: 14px;
+    line-height: 10px;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Spectral";
+    font-size: 6.5em;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    
+}
+
+.contH1 h3 {
+    margin: 0;
+    font-size: 1.6em;
+    font-weight: 400;
+    color: rgb(31, 29, 29);
+    width: 75%;
+}
+
+.sottoNav {
+    background-color: #FBC018;
+    border-bottom: 1px solid black;
+    display: flex;
+}
+
+main .contH1 {
+    padding: 50px 60px;
+
+
+}
+
+.contH1 button {
+    color: white;
+    background-color: rgb(31, 29, 29);
+    border-radius: 99em;
+    padding: 10px 40px;
+    border: none;
+    font-weight: 500;
+    font-size: 1.3em;
+    margin: 40px 0;
+    cursor: pointer;
+}
+/* TRENDING */
+
+.contenitoreTrending{
+    
+    border-bottom: 1px solid rgb(225, 221, 221);
+    width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 60px;
+}
+.spanTrending{
+    color: grey;
+}
+
+.trending{
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 80px;
+}
+
+.contenitoreSupremoCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 0 60px;
+    box-sizing: border-box;
+}
+
+.card{
+    display: flex;
+    width: 33%;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    
+   
+    
+}
+
+.contenitoreCard{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.number{
+    font-size: 2em;
+    font-weight: 600;
+    opacity: 0.2;
+    margin-right: 20px;
+    margin-top: -7px;
+    margin-left: 10px;
+}
+
+.icona{
+    display: flex;
+}
+
+.icona img{
+    border-radius: 50%;
+    height: 20px;
+}
+
+.icona p{
+    margin: 0 5px;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+.data{
+    color: grey;
+    font-size: 0.9em;
+    display: flex
+}
+
+.contenitoreCard h4{
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+
+.stella{
+    width: 20px;
+    display: flex
+}
+
+/*ARTICOLI*/
+
+.contenitoreArticoli{
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+    padding-left: 20px;
+    width: 90%;
+}
+
+.articoloCompleto{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: 200px;
+}
+
+.imgArticolo img{
+    width: 200px;
+    margin-left: 20px;
+}
+.spanArticoli{
+    border: 1px solid #f2f2f2 ;
+    background-color: rgb(223, 222, 222);
+    border-radius: 100px;
+    padding: 3px 8px;
+    line-height: 10px;
+    margin: 0 10px;
+    
+    
+}
+
+.articolo h3, .articolo p{
+    margin: 5px 0;
+}
+
+
+
+.contenitoreMuzzu{
+    display: flex;
+    padding: 20px 60px;
+   
+}
+
+/* ASIDE */
+
+aside{
+    display: flex;
+    flex-direction: column;
+    
+    width:60%;
+    margin-left: 80px;
+    margin-top: 45px;
+    margin-right: 30px;
+    bottom: 0;
+    
+}
+
+.spanAside span{
+border-radius: 0;
+padding: 4px 12px ;
+background-color: transparent;
+border: 1px solid grey;
+color: grey;
+font-size: 14px;
+margin-right: 4px;
+line-height: 35px;
+
+}
+
+.spanAside{
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(208, 206, 206);
+}
+.contenitoreSpan h3{
+    
+    font-size: 14px;
+    
+    
+}
+
+.contenitoreSpan{
+    position: sticky;
+    top: 100px;
+}
+
+ .footer
+{
+   
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 280px;
+}
+
+.footer p{
+    
+    color: grey;
+    font-size: 14px;
+    margin: 0 10px;
+    line-height: 30px;
+} 
+
+
+
