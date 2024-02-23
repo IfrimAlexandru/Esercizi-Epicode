@@ -173,12 +173,12 @@ main .contH1 {
 
 .data{
     color: grey;
-    font-size: 0.9em;
+    font-size: 0.8em;
     display: flex
 }
 
 .contenitoreCard h4{
-    font-size: 1.1em;
+    font-size: 0.8em;
     margin: 10px 0;
 }
 
@@ -213,9 +213,10 @@ main .contH1 {
     border: 1px solid #f2f2f2 ;
     background-color: rgb(223, 222, 222);
     border-radius: 100px;
-    padding: 3px 8px;
-    line-height: 10px;
+    padding: 1px 5px;
+    
     margin: 0 10px;
+
     
     
 }
