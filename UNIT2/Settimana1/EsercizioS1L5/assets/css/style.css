@@ -29,6 +29,15 @@ nav {
     
 }
 
+#navId.cambioBg{
+    background-color: white;
+}
+
+#btnScroll.cambioBgBtn{
+    background-color: green;
+}
+
+
 .divLinkNav {
     display: flex;
 
@@ -162,11 +171,15 @@ main .contH1 {
 
 .icona{
     display: flex;
+    align-items: center;
+    
 }
 
 .icona img{
+    border: 1px solid rgb(223, 223, 223);
     border-radius: 50%;
     height: 20px;
+    margin-right: 5px ;
 }
 
 .icona p{
