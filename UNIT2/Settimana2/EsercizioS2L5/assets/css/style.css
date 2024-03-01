@@ -1,0 +1,16 @@
+html,
+body {
+  background-color: black;
+}
+
+
+.hover:hover{
+  /*margin: 10px 0px;*/
+  scale: 1.2;
+  opacity: 1!important;
+ }
+
+
+      
+      
+      

@@ -1,14 +1,4 @@
-$rosso: red;
-$verde: green;
-
-h1{
-    font-size: 4em;
-    color: $rosso;
-}
-
-
-h2{
-    font-size: 3em;
-    color: $verde ;
-}
-
+@import 'partials/base';
+@import 'partials/header';
+@import 'partials/jumbotron';
+@import 'partials/main';
