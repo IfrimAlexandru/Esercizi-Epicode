@@ -1,0 +1,13 @@
+html,
+body {
+  background-color: white;
+}
+
+.fs-7{
+  font-size: 0.8rem;
+}
+
+.fs-10{
+  font-size: 0.6rem;
+  padding: 1px;
+}
