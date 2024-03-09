@@ -16,7 +16,7 @@ window.addEventListener('load', init)
 
 async function init() {
    await cercaFetch()
-    prodotto()
+    // prodotto()
 }
 
 const prodotto = async () => {
