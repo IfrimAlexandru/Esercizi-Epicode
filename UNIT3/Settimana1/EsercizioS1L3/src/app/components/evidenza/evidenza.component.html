@@ -2,5 +2,5 @@
     <h1 class="fw-bold">
         In evidenza: {{post.title}}
     </h1>
-    <a href="#">Leggi di più...</a>
+    <a [routerLink]="['/detail', post.id]">Leggi di più...</a>
 </div>

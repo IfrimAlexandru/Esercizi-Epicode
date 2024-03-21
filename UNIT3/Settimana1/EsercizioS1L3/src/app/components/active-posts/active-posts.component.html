@@ -1,1 +1,11 @@
-<p>active-posts works!</p>
+<div class="row">
+    <div class="col-md-6 p-4" *ngFor="let post of posts">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="card-title">{{ post.title }}</h2>
+          <p class="card-text">{{ post.body.slice(0, 90) }}...</p>
+          <a [routerLink]="['/detail', post.id]">Dettagli</a>
+        </div>
+      </div>
+    </div>
+  </div>

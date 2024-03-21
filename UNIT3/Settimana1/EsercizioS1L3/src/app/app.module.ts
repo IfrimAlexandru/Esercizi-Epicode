@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Route, RouterModule } from '@angular/router'; // route
 
 
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -25,7 +26,8 @@ const routes: Route[] = [  //route
   },
   {
     path: 'detail/:id',
-    component: PostDetailComponent
+    component: PostDetailComponent,
+    
   },
   {
     path: '',
