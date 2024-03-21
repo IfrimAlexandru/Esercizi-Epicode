@@ -6,12 +6,14 @@ import { ComponentDueComponent } from './components/component-due/component-due.
 import { ComponentTreComponent } from './components/component-tre/component-tre.component';
 import { ComponentQuattroComponent } from './components/component-quattro/component-quattro.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     ComponentDueComponent,
     ComponentTreComponent,
-    ComponentQuattroComponent
+    ComponentQuattroComponent,
   ],
   imports: [
     BrowserModule

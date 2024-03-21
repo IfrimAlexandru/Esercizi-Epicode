@@ -1,0 +1,27 @@
+<div>
+    <div class="mx-4">
+        <h3 class="fs-5">Potrebbero piacerti:</h3>
+        <ul class="list-group" *ngIf="isLoaded">
+            <li class="list-group-item" *ngFor="let post of advised">
+                <a href="#">🔗 {{ post ? post.title : "sconosciuto" }}</a>
+                <br />
+                <span *ngIf="post" >
+                    <span class="badge bg-primary me-1 text-uppercase" *ngFor="let tag of post.tags">{{ tag
+                        }}</span>
+                </span>
+
+                <br />
+                {{ post ? post.reactions : "sconosciuto" }} 👍
+            </li>
+        </ul>
+    </div>
+</div>
+<div>
+    <div class="mx-4">
+        <h3 class="fs-5">Vedi anche:</h3>
+        <div class="border rounded-3 bg-white">
+            <div class="p-2 border-bottom"><a routerLink="/active">Post attivi</a></div>
+            <div class="p-2 rounded-1"><a routerLink="/inactive">Post inattivi</a></div>
+        </div>
+    </div>
+</div>
