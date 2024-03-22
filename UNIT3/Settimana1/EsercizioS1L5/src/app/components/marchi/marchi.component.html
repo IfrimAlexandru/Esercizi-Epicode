@@ -1,0 +1,9 @@
+
+<div class="container">
+    <div class="row justify-content-center">
+        <h3 class="text-center">I nostri marchi</h3>
+      <div *ngFor="let brandImage of brandImages" class="col-md-3 d-flex align-items-center">
+        <img [src]="'https://listcarbrands.com/wp-content/uploads/' + brandImage.logo" alt="{{ brandImage.brand }}" class="img-fluid">
+      </div>
+    </div>
+  </div>

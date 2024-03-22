@@ -1,0 +1,36 @@
+<!-- app.component.html -->
+<nav class="navbar navbar-expand-lg bg-body-white position-sticky z-1 top-0 p-0">
+  <div class="container-fluid" style="background-color: white">
+    <a class="navbar-brand" href=""><img src="../../../assets/img/logoAuto.png" style="height: 100px"
+        alt="logoAuto" /></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav gap-2">
+        <li class="nav-item">
+          <a class="nav-link active text-danger fw-bold fs-5" aria-current="page" [routerLink]="['/']" routerLinkActive="router-link-active"  [routerLinkActiveOptions]="{exact: true}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-danger fw-bold fs-5">Trova la tua auto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-danger fw-bold fs-5">Finanziamento</a>
+        </li>
+
+        <li class="nav-item dropdown" *ngIf="brands.length > 0">
+          <a class="nav-link dropdown-toggle text-danger fw-bold fs-5" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            I nostri marchi
+          </a>
+          <ul class="dropdown-menu">
+            <li *ngFor="let brand of brands">
+              <a class="dropdown-item" [routerLink]="['/auto', brand]">{{ brand }}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
