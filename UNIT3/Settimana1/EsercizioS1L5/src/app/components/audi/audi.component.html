@@ -1,8 +1,9 @@
-<div class="container">
+<div class="container my-5">
     <div class="d-flex flex-column">
-        <h3 class="text-center">Auto in evidenza</h3>
+        <h3 class="text-center">AUDI</h3>
+        
         <div class="row" *ngIf="isLoaded">
-            <div *ngFor="let car of related" class="card col-6 align-items-center">
+            <div *ngFor="let car of related"  class="card col-6 align-items-center">
                 <img class="card-img-top w-50" [src]="'https://www.kimballstock.com/pix/car/p/' + car.modelImage" alt="Immagine Auto">
                 <div class="card-body">
                     <p class="card-text">
@@ -14,6 +15,10 @@
                     <p>
                         Prezzo {{car.price + "€"}}
                     </p>
+                    
+
+
+
                     <p class="mb-auto" [ngClass]="car.available ?'text-success': 'text-danger'">
                         <span *ngIf="car.available; else notAvailable">PRONTA CONSEGNA: <i class="bi bi-check-circle-fill ms-2"></i></span>
                         <ng-template #notAvailable>PRONTA CONSEGNA:<i class="bi bi-x-circle-fill ms-2"></i></ng-template>

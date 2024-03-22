@@ -25,9 +25,9 @@
             I nostri marchi
           </a>
           <ul class="dropdown-menu">
-            <li *ngFor="let brand of brands">
-              <a class="dropdown-item" [routerLink]="['/auto', brand]">{{ brand }}</a>
-            </li>
+            <li><a class="dropdown-item" [routerLink]="['/audi']" routerLinkActive="router-link-active" >Audi</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/fiat']" routerLinkActive="router-link-active" >Fiat</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/ford']" routerLinkActive="router-link-active">Ford</a></li>
           </ul>
         </li>
       </ul>

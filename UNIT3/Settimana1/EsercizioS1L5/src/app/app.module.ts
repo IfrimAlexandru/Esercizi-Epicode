@@ -9,8 +9,11 @@ import { HomeComponent } from './components/home/home.component';
 import { EvidenzaComponent } from './components/evidenza/evidenza.component';
 import { MarchiComponent } from './components/marchi/marchi.component';
 import { IntroComponent } from './components/intro/intro.component';
-import { AutoComponent } from './components/auto/auto.component';
+
 import { Error404Component } from './components/error404/error404.component';
+import { FiatComponent } from './components/fiat/fiat.component';
+import { FordComponent } from './components/ford/ford.component';
+import { AudiComponent } from './components/audi/audi.component';
 
 const routes: Route[] = [  //route
 
@@ -19,8 +22,16 @@ const routes: Route[] = [  //route
     component: HomeComponent
   },
   {
-    path: 'auto/:id',
-    component: AutoComponent
+    path: 'fiat',
+    component: FiatComponent
+  },
+  {
+    path: 'audi',
+    component: AudiComponent
+  },
+  {
+    path: 'ford',
+    component: FordComponent
   },
   {
     path: '**',
@@ -37,8 +48,11 @@ const routes: Route[] = [  //route
     EvidenzaComponent,
     MarchiComponent,
     IntroComponent,
-    AutoComponent,
-    Error404Component
+    
+    Error404Component,
+    FiatComponent,
+    FordComponent,
+    AudiComponent
   ],
   imports: [
     BrowserModule,
