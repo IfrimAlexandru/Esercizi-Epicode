@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cars } from 'src/app/models/cars.interface';
 
+
 @Component({
   selector: 'app-evidenza',
   templateUrl: './evidenza.component.html',
