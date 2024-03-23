@@ -4,7 +4,7 @@
         
         <div class="row" *ngIf="isLoaded">
             <div *ngFor="let car of related"  class="card col-6 align-items-center">
-                <img class="card-img-top w-50" [src]="'https://www.kimballstock.com/pix/car/p/' + car.modelImage" alt="Immagine Auto">
+                <img class="card-img-top w-50" [src]="car.modelImage" alt="Immagine Auto">
                 <div class="card-body">
                     <p class="card-text">
                         {{car.brand + " " +  car.model}}

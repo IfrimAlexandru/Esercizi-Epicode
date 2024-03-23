@@ -24,7 +24,7 @@ export class FordComponent implements OnInit{
         throw new Error('Errore nel caricamento dei dati.');
       }
       const dati = await response.json();
-      this.cars = dati.filter((car: Cars) => car.brand.toLowerCase() === 'audi');
+      this.cars = dati.filter((car: Cars) => car.brand.toLowerCase() === 'ford');
       this.evidenzaCars();
     } catch (error) {
       console.error('Si è verificato un errore durante il caricamento dei dati:', error);
