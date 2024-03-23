@@ -32,18 +32,9 @@ export class AudiComponent implements OnInit{
   }
   
   evidenzaCars() {
-    while (this.included.length < 2) {
-      let index = Math.floor(Math.random() * this.cars.length);
-      if (!this.included.includes(index)) {
-        this.included.push(index);
-      }
+    for (let i = 0; i < this.cars.length; i++) {
+      this.related.push(this.cars[i]);
     }
-  
-    for (let i = 0; i < this.included.length; i++) {
-      let carsIndex = this.included[i];
-      this.related.push(this.cars[carsIndex]);
-    }
-    
     this.isLoaded = true;
   }
   }

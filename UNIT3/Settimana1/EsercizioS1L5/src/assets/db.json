@@ -18,6 +18,24 @@
         "available": true
     },
     {
+        "brand": "Fiat",
+        "brandLogo": "https://listcarbrands.com/wp-content/uploads/2016/02/Logo-Fiat-600x338.png",
+        "model": "PULSE",
+        "modelImage": "https://aventuramotors.cl/storage/imagenes/am-fiat-pulse-fotosinterioresexteriores-01-005615800-1666817954.png",
+        "year": 2023,
+        "price": 32000,
+        "available": true
+    },
+    {
+        "brand": "Fiat",
+        "brandLogo": "https://listcarbrands.com/wp-content/uploads/2016/02/Logo-Fiat-600x338.png",
+        "model": "124 Spider",
+        "modelImage": "https://purepng.com/public/uploads/large/purepng.com-black-and-white-fiat-124-spider-abarth-carcarvehicletransportfiat-961524650236y4jqy.png",
+        "year": 2023,
+        "price": 32000,
+        "available": true
+    },
+    {
         "brand": "Ford",
         "brandLogo": "https://listcarbrands.com/wp-content/uploads/2016/03/Ford-Logo-600x338.png",
         "model": "Taurus",
@@ -25,6 +43,24 @@
         "year": 2009,
         "price": 5200,
         "available": false
+    },
+    {
+        "brand": "Ford",
+        "brandLogo": "https://listcarbrands.com/wp-content/uploads/2016/03/Ford-Logo-600x338.png",
+        "model": "Mustang Mach-e",
+        "modelImage": "https://ddc1.s3.us-east-1.amazonaws.com/LjS1QspmqnfUp1P9FSAq7Q%3D%3D/CDy2BvBgonXepU%2Bu/Vm3qUw%3D%3D/KSirFvhgoiXyo0m1fgo%3D/trim_firstedition.png",
+        "year": 2009,
+        "price": 5200,
+        "available": false
+    },
+    {
+        "brand": "Ford",
+        "brandLogo": "https://listcarbrands.com/wp-content/uploads/2016/03/Ford-Logo-600x338.png",
+        "model": "Ranger Raptor",
+        "modelImage": "https://www.fordeuroteam.it/images/vehicles/4137931/0/large",
+        "year": 2018,
+        "price": 63000,
+        "available": true
     },
     {
         "brand": "Ford",
@@ -54,10 +90,46 @@
         "available": false
     },
     {
+        "brand": "Audi",
+        "brandLogo": "https://listcarbrands.com/wp-content/uploads/2015/10/Audi-Logo-600x338.png",
+        "model": "R8",
+        "modelImage": "https://www.motortrend.com/uploads/bg-index/2020-auidR8-convertible.png?fit=around%7C875:492.1875",
+        "year": 2020,
+        "price": 41700,
+        "available": true
+    },
+    {
+        "brand": "Audi",
+        "brandLogo": "https://listcarbrands.com/wp-content/uploads/2015/10/Audi-Logo-600x338.png",
+        "model": "Q9",
+        "modelImage": "https://i.pinimg.com/736x/4f/fc/8c/4ffc8cb60e86c9ec8ae84b0e0145e1db.jpg",
+        "year": 2023,
+        "price": 38000,
+        "available": true
+    },
+    {
         "brand": "Mazda",
         "brandLogo": "https://1000logos.net/wp-content/uploads/2019/12/Mazda_Logo.png",
         "model": "CX-30",
         "modelImage": "https://media-assets.mazda.eu/image/upload/c_fill,w_768,h_384,q_auto,f_auto/mazdait/globalassets/cars/2024-mazda-cx-30/clearcuts/2024_mazda_cx-30_prime-line_front.png?rnd=49d3b0",
+        "year": 2022,
+        "price": 32000,
+        "available": true
+    },
+    {
+        "brand": "Mazda",
+        "brandLogo": "https://1000logos.net/wp-content/uploads/2019/12/Mazda_Logo.png",
+        "model": "6 Sedan",
+        "modelImage": "https://media-assets.mazda.eu/image/upload/q_auto,f_auto/mazdach/globalassets/cars/2023-mazda6-sedan/clearcuts/mme_m6_ggnfeaa_46v_7-8.png?rnd=4afefe",
+        "year": 2022,
+        "price": 32000,
+        "available": true
+    },
+    {
+        "brand": "Mazda",
+        "brandLogo": "https://1000logos.net/wp-content/uploads/2019/12/Mazda_Logo.png",
+        "model": "MX-5",
+        "modelImage": "https://media-assets.mazda.eu/image/upload/q_auto,f_auto/mazdait/globalassets/cars/2024-mx-5-st/assets/showroom/mx5_st_tab_module_primeline_ng7deac_52c_lhd_1000_500.png?rnd=48db29",
         "year": 2022,
         "price": 32000,
         "available": true
