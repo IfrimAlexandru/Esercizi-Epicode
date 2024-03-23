@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cars } from 'src/app/models/cars.interface';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,6 +13,8 @@ cars!: Cars[];
 included: number[] = [];
 related: Cars[] = [];
 isLoaded = false;
+
+constructor(private router: Router) {}
 
 ngOnInit(): void {
   this.readCars();
@@ -45,5 +48,11 @@ evidenzaCars() {
   }
   
   this.isLoaded = true;
+}
+
+redirectToBrand(brand: string) {
+  
+  const brandLowerCase = brand.toLowerCase();
+  this.router.navigate([brandLowerCase]);
 }
 }
