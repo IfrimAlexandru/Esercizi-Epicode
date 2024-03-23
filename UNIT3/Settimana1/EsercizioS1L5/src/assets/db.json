@@ -51,7 +51,7 @@
         "modelImage": "https://ddc1.s3.us-east-1.amazonaws.com/LjS1QspmqnfUp1P9FSAq7Q%3D%3D/CDy2BvBgonXepU%2Bu/Vm3qUw%3D%3D/KSirFvhgoiXyo0m1fgo%3D/trim_firstedition.png",
         "year": 2009,
         "price": 5200,
-        "available": false
+        "available": true
     },
     {
         "brand": "Ford",

@@ -3,7 +3,7 @@
         <h3 class="text-center">FORD</h3>
         
         <div class="row" *ngIf="isLoaded">
-            <div *ngFor="let car of related" class="card col-6 align-items-center">
+            <div *ngFor="let car of related" class="card col-12 col-md-6 align-items-center">
                 <img class="card-img-top w-50" [src]="car.modelImage" alt="Immagine Auto">
                 <div class="card-body">
                     <p class="card-text">
