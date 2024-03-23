@@ -1,8 +1,9 @@
-<div class="container pb-4">
-    <div class="d-flex flex-column ">
-        <h3 class="text-center pb-4">Auto in evidenza</h3>
+<div class="container my-5">
+    <div class="d-flex flex-column">
+        <h3 class="text-center">Mazda</h3>
+        
         <div class="row" *ngIf="isLoaded">
-            <div *ngFor="let car of related" class="card col-4 align-items-center">
+            <div *ngFor="let car of related" class="card col-6 align-items-center">
                 <img class="card-img-top w-50" [src]="car.modelImage" alt="Immagine Auto">
                 <div class="card-body">
                     <p class="card-text">
@@ -23,4 +24,3 @@
         </div>
     </div>
 </div>
-

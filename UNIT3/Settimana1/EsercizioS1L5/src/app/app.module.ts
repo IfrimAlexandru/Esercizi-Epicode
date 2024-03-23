@@ -14,6 +14,7 @@ import { Error404Component } from './components/error404/error404.component';
 import { FiatComponent } from './components/fiat/fiat.component';
 import { FordComponent } from './components/ford/ford.component';
 import { AudiComponent } from './components/audi/audi.component';
+import { MazdaComponent } from './components/mazda/mazda.component';
 
 const routes: Route[] = [  //route
 
@@ -34,6 +35,10 @@ const routes: Route[] = [  //route
     component: FordComponent
   },
   {
+    path: 'mazda',
+    component: MazdaComponent
+  },
+  {
     path: '**',
     component: Error404Component
   }
@@ -52,7 +57,8 @@ const routes: Route[] = [  //route
     Error404Component,
     FiatComponent,
     FordComponent,
-    AudiComponent
+    AudiComponent,
+    MazdaComponent
   ],
   imports: [
     BrowserModule,

@@ -52,6 +52,24 @@
         "year": 2020,
         "price": 41700,
         "available": false
+    },
+    {
+        "brand": "Mazda",
+        "brandLogo": "https://1000logos.net/wp-content/uploads/2019/12/Mazda_Logo.png",
+        "model": "CX-30",
+        "modelImage": "https://media-assets.mazda.eu/image/upload/c_fill,w_768,h_384,q_auto,f_auto/mazdait/globalassets/cars/2024-mazda-cx-30/clearcuts/2024_mazda_cx-30_prime-line_front.png?rnd=49d3b0",
+        "year": 2022,
+        "price": 32000,
+        "available": true
+    },
+    {
+        "brand": "Mazda",
+        "brandLogo": "https://1000logos.net/wp-content/uploads/2019/12/Mazda_Logo.png",
+        "model": "Q7",
+        "modelImage": "https://www.mazdausa.com/siteassets/vehicles/2024/mazda3-sedan/build-and-price/trims/34-jellies/carbon/2024-mazda-3-sedan-2.5-s-carbon-edition-package",
+        "year": 2021,
+        "price": 35000,
+        "available": true
     }
    
 ]

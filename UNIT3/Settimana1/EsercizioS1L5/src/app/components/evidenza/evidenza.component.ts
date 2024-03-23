@@ -32,7 +32,7 @@ async readCars() {
 }
 
 evidenzaCars() {
-  while (this.included.length < 2) {
+  while (this.included.length < 3) {
     let index = Math.floor(Math.random() * this.cars.length);
     if (!this.included.includes(index)) {
       this.included.push(index);
