@@ -1,0 +1,16 @@
+<h3 class="text-center">Totale prodotti preferiti: {{ totFavorites }}</h3>
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-4 mb-4" *ngFor="let preferito of preferiti">
+      <div class="card h-100">
+        <img class="card-img-top" [src]="preferito.images[0]" alt="Immagine del prodotto">
+        <div class="card-body">
+          <h5 class="card-title">{{ preferito.title }}</h5>
+          <p class="card-text">{{ preferito.description }}</p>
+          <p class="card-text">Prezzo: {{ preferito.price }} €</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

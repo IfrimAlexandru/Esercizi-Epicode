@@ -1,0 +1,35 @@
+
+
+<div class="container-fluid">
+    <div class="row mt-5 d-flex">
+        <div class="col-12 col-md-8"> 
+            <ng-container *ngIf="product; else loadingTemplate">
+                <div class="row">
+                    <div class="col-12 col-md-4 my-3" *ngFor="let prodotto of product"> <!-- Utilizza col-md-6 per le card -->
+                        <div class="card h-100">
+                            <img class="card-img-top" [src]="prodotto.images[0]" alt="Immagine del prodotto">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ prodotto.title }}</h5>
+                                <p class="card-text">{{ prodotto.description }}</p>
+                                <p class="card-text">Prezzo: {{ prodotto.price }} €</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn btn-primary">Aggiungi al carrello</button>
+                                    <i class="bi text-danger fs-4" [class.bi-heart]="!prodotto.isFavorite"
+                                        [class.bi-heart-fill]="prodotto.isFavorite" (click)="toggleFavorite(prodotto)"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-template #loadingTemplate>
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </ng-template>
+        </div>
+        <div class="col-md-4">
+            <app-carrello></app-carrello> 
+        </div>
+    </div>
+</div>
