@@ -1,0 +1,11 @@
+
+
+<div *ngFor="let todo of todos" [ngStyle]="{'background-color': todo.completed ? '#C2F8CB' : '#C75146'}">
+  <h2>{{ todo.todo }}</h2>
+  <p>
+    Completed: 
+    <input type="checkbox" [checked]="todo.completed" (change)="toggleCompleted(todo)">
+  </p>
+  <p>Assigned to: {{ getUserFullName(todo.userId) }}</p>
+  <hr> 
+</div>
