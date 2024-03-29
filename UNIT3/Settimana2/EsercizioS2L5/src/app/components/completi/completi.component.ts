@@ -16,9 +16,9 @@ export class CompletiComponent implements OnInit {
     this.loadCompletedTodos();
   }
 
-  loadCompletedTodos(): void {
-    this.completiService.getCompletedTodos().subscribe(completedTodos => {
-      this.completedTodos = completedTodos;
+ loadCompletedTodos(): void {
+    this.completiService.getTodos().subscribe(todos => {
+      this.completedTodos = todos.filter(todo => todo.completed);
     });
   }
 }

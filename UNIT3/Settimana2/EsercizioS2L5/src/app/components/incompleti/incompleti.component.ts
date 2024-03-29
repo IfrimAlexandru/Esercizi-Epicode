@@ -10,14 +10,14 @@ import { TodoService } from 'src/app/services/todo.service';
 export class IncompletiComponent implements OnInit {
   incompletedTodos: Todo[] = [];
 
-  constructor(private todoService: TodoService) {}
+  constructor(private incompletiService: TodoService) {}
 
   ngOnInit(): void {
     this.loadIncompletedTodos();
   }
 
   loadIncompletedTodos(): void {
-    this.todoService.getTodos().subscribe(todos => {
+    this.incompletiService.getTodos().subscribe(todos => {
       this.incompletedTodos = todos.filter(todo => !todo.completed);
     });
   }
