@@ -29,6 +29,19 @@ export class TodoService {
     );
   }
 
+  updateTodoLocally(todo: Todo): void {
+    const index = this.todos.findIndex(t => t.id === todo.id);
+    if (index !== -1) {
+      this.todos[index] = todo;
+    }
+  }
+
+  getTodosByUserId(userId: number): Observable<Todo[]> {
+    return this.getTodos().pipe(
+      map(todos => todos.filter(todo => todo.userId === userId))
+    );
+  }
+
   
 
   
