@@ -1,1 +1,11 @@
-<p>users works!</p>
+<div class="card-container">
+    <div class="card" *ngFor="let user of users">
+        <div><img [src]="user.image" alt="User Image"></div>
+      
+      <div class="card-body">
+        <h5 class="card-title">{{ user.firstName }} {{ user.lastName }}</h5>
+        <p class="card-text">{{ user.title }}</p>
+        <p class="card-text">{{ user.email }}</p>
+      </div>
+    </div>
+  </div>

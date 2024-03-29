@@ -11,7 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class HomeComponent implements OnInit {
   todos: Todo[] = [];
-  users: User[] = []; 
+  users: User[] = []; // Aggiungi una variabile per memorizzare i dati degli utenti
 
   constructor(private todoSrv: TodoService, private userSrv: UserService) {}
 
@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
     todo.completed = !todo.completed;
   }
 
-
+ 
   getUserFullName(userId: number): string {
     const user = this.users.find(u => u.id === userId);
     return user ? `${user.firstName} ${user.lastName}` : 'Unknown';
