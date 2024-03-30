@@ -1,18 +1,23 @@
-<h1 class="my-4  d-flex justify-content-center">All Tasks <img src="../../../assets/img/todolistHomePage.svg" style="width: 50px; margin-left: 10px;" alt="">
-</h1>
-<div id="card" class="d-flex my-3 mx-4 rounded-3 py-2" *ngFor="let todo of todos" [ngStyle]="{'background-color': todo.completed ? '#C2F8CB' : '#C75146'}">
-  
+<div id="card" class="d-flex my-3 mx-4 rounded-3 py-2" *ngFor="let todo of todos"
+  [ngStyle]="{'background-color': todo.completed ? '#C2F8CB' : '#C75146'}">
   <div>
-    <h2 class="mx-3">{{todo.id}}</h2>
+    <h2 class="mx-3">{{ todo.id }}</h2>
   </div>
-  <div>
-    <h2>{{ todo.todo }}</h2>
-    <p>
-      Completed:
-      <input type="checkbox" [checked]="todo.completed" (change)="toggleCompleted(todo)">
-    </p>
-    <p>Assigned to: {{ getUserFullName(todo.userId) }}</p>
-    
-  </div>
+  <div class="d-flex align-items-center">
+    <div>
+      <h2>{{ todo.todo }}</h2>
+      <p>
+        Completed:
+        <input type="checkbox" [checked]="todo.completed" (change)="toggleCompleted(todo)">
+      </p>
+      <div class="d-flex align-items-center">
+        <p class="m-0">Assigned to: {{ getUserFullName(todo.userId) }}</p>
+        <div class="border border-1 border-black rounded-5 bg-body-secondary ms-2"><img *ngIf="getUserById(todo.userId)?.image" [src]="getUserById(todo.userId)?.image" alt="User Avatar"
+          style="width: 40px; position: relative; right: 2px; bottom: 3px; padding: 4px; margin: 3px; "></div>
+        
+      </div>
 
+    </div>
+
+  </div>
 </div>

@@ -41,4 +41,9 @@ export class HomeComponent implements OnInit {
     const user = this.users.find(u => u.id === userId);
     return user ? `${user.firstName} ${user.lastName}` : 'Unknown';
   }
+
+  getUserById(userId: number): User | undefined {
+    return this.users.find(user => user.id === userId);
+  }
+  
 }
