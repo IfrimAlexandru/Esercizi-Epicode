@@ -16,10 +16,6 @@ export class UsersComponent implements OnInit {
   constructor(private userService: UserService, private todoService: TodoService) { }
 
   ngOnInit(): void {
-    this.loadUsers();
-  }
-
-  loadUsers(): void {
     this.userService.getUsers().subscribe(users => {
       this.users = users;
       this.loadUserTodos();
