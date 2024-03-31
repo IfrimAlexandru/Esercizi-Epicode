@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import {  map } from 'rxjs/operators';
 import { Todo } from '../interfaces/todo.interface';
 
@@ -8,10 +8,20 @@ import { Todo } from '../interfaces/todo.interface';
   providedIn: 'root'
 })
 export class TodoService {
-  todoUrl = 'assets/dati/todos.json'; 
+  todoUrl = 'assets/dati/todos.json';
   todos: Todo[] = [];
+  todos$: BehaviorSubject<Todo[]> = new BehaviorSubject<Todo[]>([])
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+      this.fetchIniziale()
+  }
+
+  async fetchIniziale() {
+    fetch(this.todoUrl).then((data) => data.json()).then((value:Todo[]) => {
+      this.todos = value
+      this.todos$.next(this.todos)
+    })
+  }
 
   getTodos(): Observable<Todo[]> {
     return this.http.get<Todo[]>(this.todoUrl);
@@ -33,6 +43,7 @@ export class TodoService {
     const index = this.todos.findIndex(t => t.id === todo.id);
     if (index !== -1) {
       this.todos[index] = todo;
+      this.todos$.next(this.todos)
     }
   }
 

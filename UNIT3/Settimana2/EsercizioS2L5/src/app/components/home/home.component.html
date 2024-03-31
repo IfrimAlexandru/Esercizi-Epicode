@@ -1,3 +1,7 @@
+<div class="d-flex justify-content-center align-items-center my-4">
+  <h1 class="m-0">All Tasks</h1>
+  <img class="ms-2" src="../../../assets/img/todolistHomePage.svg" alt="">
+</div>
 <div id="card" class="d-flex my-3 mx-4 rounded-3 py-2" *ngFor="let todo of todos"
   [ngStyle]="{'background-color': todo.completed ? '#C2F8CB' : '#C75146'}">
   <div>

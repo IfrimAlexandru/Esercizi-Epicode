@@ -17,8 +17,14 @@ export class IncompletiComponent implements OnInit {
   }
 
   loadIncompletedTodos(): void {
-    this.incompletiService.getTodos().subscribe(todos => {
+    this.incompletiService.todos$.subscribe(todos => {
       this.incompletedTodos = todos.filter(todo => !todo.completed);
     });
   }
+
+  toggleCompleted(todo:Todo) {
+    todo.completed = !todo.completed
+    this.incompletiService.updateTodoLocally(todo)
+  }
+  
 }

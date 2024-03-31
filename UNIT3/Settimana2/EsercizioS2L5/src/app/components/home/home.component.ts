@@ -11,7 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class HomeComponent implements OnInit {
   todos: Todo[] = [];
-  users: User[] = []; // Aggiungi una variabile per memorizzare i dati degli utenti
+  users: User[] = []; 
 
   constructor(private todoSrv: TodoService, private userSrv: UserService) {}
 
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   loadTodos(){
-    this.todoSrv.getTodos().subscribe(todos => {
+    this.todoSrv.todos$.subscribe(todos => {
       this.todos = todos;
       this.loadUsers(); 
     });

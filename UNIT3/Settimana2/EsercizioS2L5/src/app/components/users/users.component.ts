@@ -29,4 +29,9 @@ export class UsersComponent implements OnInit {
       });
     });
   }
+  toggleCompleted(todo: Todo) {
+    todo.completed = !todo.completed;
+  }
+
+  
 }

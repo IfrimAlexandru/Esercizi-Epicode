@@ -1,6 +1,11 @@
-<h1 class="my-4  d-flex justify-content-center">Completed Tasks <i class="bi bi-check-circle ms-3"></i>
-</h1>
-<div *ngFor="let todo of completedTodos">
-    <h2>{{ todo.todo }}</h2>
-    <p>Completed: {{ todo.completed ? 'Yes' : 'No' }}</p>
+<h1 class="my-4 d-flex justify-content-center">Completed Tasks <i class="bi bi-check-circle ms-3 "></i></h1>
+<div class="row px-5 g-3">
+  <div *ngFor="let todo of completedTodos" class="border rounded-2 col-12 col-md-6 p-3" >
+    <h2>{{ todo.todo}}</h2>
+    <p>Completed:
+      <a (click)="toggleCompleted(todo)">
+        <i class="bi bi-check-circle-fill text-success fs-4"></i>
+      </a>
+    </p>
   </div>
+</div>
