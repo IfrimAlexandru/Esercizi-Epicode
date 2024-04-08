@@ -1,0 +1,55 @@
+<div class="col-6 my-3 border border-secondary-subtle p-4 rounded-2">
+    <h2>TEMPLATE DRIVEN FORM</h2>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+        <div class="d-flex justify-content-around my-3">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" [(ngModel)]="model.name" required />
+
+            
+         
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" name="surname" [(ngModel)]="model.surname" required />
+        </div>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="model.email" required
+            pattern="^[\w-]+(\.[\w-]+)*@[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*(\.[a-zA-Z]{2,})$" />
+        <div *ngIf="myForm.controls['email'].dirty && myForm.controls['email'].invalid" class="text-danger">
+            Inserisci un indirizzo email valido
+        </div>
+
+        <div class="d-flex justify-content-around">
+            <label for="password1">Password</label>
+            <input type="password" id="password1" name="password1" [(ngModel)]="model.password1" required
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" />
+
+            <label for="password2">Confirm Password</label>
+            <input type="password" id="password2" name="password2" [(ngModel)]="model.password2" required />
+        </div>
+
+        <!-- Mostra il messaggio di errore solo se la password non rispetta i criteri -->
+        <div *ngIf="
+        myForm.controls['password1'].dirty &&
+        myForm.controls['password1'].invalid
+      " class="text-danger">
+            La password deve contenere almeno un numero, una lettera minuscola, una
+            lettera maiuscola e deve avere una lunghezza minima di 8 caratteri
+        </div>
+
+        <!-- Mostra il messaggio di errore solo se la password non corrisponde -->
+        <div *ngIf="
+        myForm.controls['password1'].value !==
+          myForm.controls['password2'].value &&
+        myForm.controls['password2'].dirty
+      " class="text-danger">
+            Le password non corrispondono
+        </div>
+
+        <select id="disabledSelect" class="form-select" [(ngModel)]="model.gender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
