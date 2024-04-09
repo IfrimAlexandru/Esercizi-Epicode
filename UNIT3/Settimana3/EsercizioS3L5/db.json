@@ -17,6 +17,12 @@
       "password": "$2a$10$9NjZwSfYe11qGzicPQl.deD2CwfKDg3f90fihgHxRDTLetzYZYBl2",
       "name": "Alexandru Ifrim",
       "id": 4
+    },
+    {
+      "email": "sebastian@bach.it",
+      "password": "$2a$10$RC8Pd4czDSPesD6cmIdTpeSpnnm.9TubUO7qpN/lAu3rf1K8T6Cr.",
+      "name": "Sebastian Bach",
+      "id": 5
     }
   ],
   "favorites": [

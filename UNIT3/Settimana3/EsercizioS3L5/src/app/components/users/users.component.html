@@ -1,5 +1,7 @@
-<h1 class="text-center my-4">La lista dei nostri utenti</h1>
-<div  *ngFor="let item of user" class="container">
+
+<div style="height: 480px;">
+<h1 class="text-center mb-5 pt-4 text-white"  >La lista dei nostri utenti</h1>
+<div  *ngFor="let item of user" class="container " >
     <div class="accordion accordion-flush" id="accordion{{item.id}}">
     <div class="accordion-item">
       <h2 class="accordion-header">
@@ -12,4 +14,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
