@@ -1,4 +1,4 @@
-package it.epicode;
+package it.epicode.Esercizio3;
 
 import java.util.Scanner;
 
