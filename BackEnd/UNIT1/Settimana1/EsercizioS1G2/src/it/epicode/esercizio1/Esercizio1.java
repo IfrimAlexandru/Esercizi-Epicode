@@ -1,9 +1,14 @@
 package it.epicode.esercizio1;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Scanner;
 
 public class Esercizio1 {
+    static Logger logger = LoggerFactory.getLogger("logger1");
     public static void main(String[] args) {
+        logger.info("Sto lanciando l'applicazione");
         Scanner scanner = new Scanner(System.in);
         //ESERCIZIO #1
         System.out.println("Scrivi una parola");
@@ -17,6 +22,7 @@ public class Esercizio1 {
         int anno = scanner.nextInt();
         boolean bisestile = annoBisestile(anno);
         System.out.println("L'anno inserito è bisestile? " + bisestile );
+        logger.info("Sto terminando l'applicazione");
     }
 
     public static Boolean pariODispari(String stringa){
@@ -37,4 +43,5 @@ public class Esercizio1 {
             return false;
         }
     }
+
 }

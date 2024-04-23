@@ -1,0 +1,10 @@
+2024-04-22 20:33:44,401 INFO [main] logger [Main.java:17] -- Inserisci il numero di km percorsi: 
+2024-04-22 20:33:54,163 INFO [main] logger [Main.java:21] -- Inserisci i litri di carburante consumati: 
+2024-04-22 20:34:22,530 INFO [main] logger [Main.java:17] -- Inserisci il numero di km percorsi: 
+2024-04-22 20:34:25,260 INFO [main] logger [Main.java:21] -- Inserisci i litri di carburante consumati: 
+2024-04-22 20:34:26,370 ERROR [main] logger [Main.java:32] -- Errore: impossibile dividere per zero. Assicurati di inserire un valore diverso da zero per i litri consumati.
+2024-04-22 20:46:31,419 INFO [main] logger [Main.java:17] -- Inserisci il numero di km percorsi: 
+2024-04-22 20:46:33,898 ERROR [main] logger [Main.java:30] -- Errore: inserire un numero valido.
+2024-04-22 20:46:41,359 INFO [main] logger [Main.java:17] -- Inserisci il numero di km percorsi: 
+2024-04-22 20:51:46,498 INFO [main] logger [Banca.java:13] -- Saldo conto: 20000.0
+2024-04-22 20:51:46,500 INFO [main] logger [Banca.java:18] -- Saldo conto: 18249.5

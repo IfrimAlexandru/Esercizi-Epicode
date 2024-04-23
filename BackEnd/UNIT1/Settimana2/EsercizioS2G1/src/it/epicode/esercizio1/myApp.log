@@ -1,0 +1,7 @@
+2024-04-22 20:59:49,040 INFO [main] logger [Main.java:26] -- Array iniziale:
+2024-04-22 20:59:49,042 INFO [main] logger [Main.java:32] -- Inserisci un numero (0 per uscire): 
+2024-04-22 20:59:52,899 INFO [main] logger [Main.java:40] -- Inserisci la posizione (da 1 a 5): 
+2024-04-22 20:59:55,083 ERROR [main] logger [Main.java:47] -- Errore: inserire una posizione valida.
+2024-04-22 20:59:55,083 INFO [main] logger [Main.java:40] -- Inserisci la posizione (da 1 a 5): 
+2024-04-22 20:59:58,538 INFO [main] logger [Main.java:56] -- Nuovo stato dell'array:
+2024-04-22 20:59:58,539 INFO [main] logger [Main.java:32] -- Inserisci un numero (0 per uscire): 
