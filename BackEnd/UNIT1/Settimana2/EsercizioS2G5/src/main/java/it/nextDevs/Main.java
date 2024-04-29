@@ -1,35 +1,32 @@
 package it.nextDevs;
 
-import org.apache.commons.io.FileUtils;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDate;
+import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.time.LocalDate;
-import java.util.stream.Collectors;
-
 public class Main {
-    static Logger logger = LoggerFactory.getLogger("logger");
+
+    static Logger logger = LoggerFactory.getLogger(Main.class);
+
     public static void main(String[] args) {
         CatalogoBibliotecario catalogo = new CatalogoBibliotecario();
-        Riviste rivista1 = new Riviste("SIsbn0001", "Vogue", LocalDate.of(2021,10,6),
+        Riviste rivista1 = new Riviste("SIsbn0001", "Vogue", LocalDate.of(2021, 10, 6),
                 57, Periodicita.SEMESTRALE);
-        Riviste rivista2 = new Riviste("SIsbn0002", "Forbes", LocalDate.of(2020,10,6),
+        Riviste rivista2 = new Riviste("SIsbn0002", "Forbes", LocalDate.of(2020, 10, 6),
                 64, Periodicita.MENSILE);
-        Riviste rivista3 = new Riviste("SIsbn0003", "Rolling Stones", LocalDate.of(2019,10,6),
+        Riviste rivista3 = new Riviste("SIsbn0003", "Rolling Stones", LocalDate.of(2019, 10, 6),
                 82, Periodicita.SETTIMANALE);
 
-
-        Libri libro1 = new Libri("LIsbn0004", "Il signore degli anelli", LocalDate.of(2022,10,6),
-                415,
-                "J.R.R. Tolkien", "Fantasy");
-        Libri libro2 = new Libri("LIsbn0005", "Shining", LocalDate.of(2023,10,6),
-                454,
-                "Stephen King", "Horror");
-        Libri libro3 = new Libri("LIsbn0006", "L'assassinio di Roger Ackroyd", LocalDate.of(2018,10,
-                6),
+        Libri libro1 = new Libri("LIsbn0004", "Il signore degli anelli", LocalDate.of(2022, 10, 6),
+                415, "J.R.R. Tolkien", "Fantasy");
+        Libri libro2 = new Libri("LIsbn0005", "Shining", LocalDate.of(2023, 10, 6),
+                454, "Stephen King", "Horror");
+        Libri libro3 = new Libri("LIsbn0006", "L'assassinio di Roger Ackroyd", LocalDate.of(2018, 10, 6),
                 530, "Agatha Christie", "Thriller");
 
         try {
@@ -45,10 +42,10 @@ public class Main {
 
         System.out.println(catalogo);
 
-        // Qui ho fatto varie prove per vedere il funzionamento dei metodi e delle eccezioni
+        // Utilizzo dei vari metodi
 
         Libri libro4 = new Libri("LIsbn0007", "Il guardiano degli innocenti",
-                LocalDate.of(2017,4,14), 650, "Andrei Sapkowski", "Fantasy");
+                LocalDate.of(2017, 4, 14), 650, "Andrei Sapkowski", "Fantasy");
         try {
             catalogo.aggiungiProdotto(libro4);
         } catch (CatalogoException e) {
@@ -85,58 +82,50 @@ public class Main {
             logger.error(e.getMessage());
         }
 
-
         // Scrittura del catalogo su file
+        scriviCatalogoSuFile(catalogo);
+    }
 
-        String stringaCatalogo = catalogo.getCatalogo().values().stream().map(elemento -> {
-            if (elemento instanceof Libri) {
-                return "Libro" + "@" + elemento.getCodiceISBN() + "@" + elemento.getTitolo() + "@" + elemento.getAnnoPubblicazione()
-                        + "@" + elemento.getNumeroPagine() + "@" + ((Libri) elemento).getAutore() + "@" + ((Libri) elemento).getGenere();
-            } else {
-                return "Rivista" + "@" + elemento.getCodiceISBN() + "@" + elemento.getTitolo() + "@" + elemento.getAnnoPubblicazione()
-                        + "@" + elemento.getNumeroPagine() + "@" + ((Riviste) elemento).getPeriodicita();
-            }
-        }).collect(Collectors.joining("#"));
-
-
+    private static void scriviCatalogoSuFile(CatalogoBibliotecario catalogo) {
         File file = new File("./salvataggio/nuovoFile.txt");
 
-        try {
-            FileUtils.writeStringToFile(file, stringaCatalogo, Charset.defaultCharset());
-        } catch (IOException e) {
-            logger.error(e.getMessage());
-        }
-
-        // Lettura del catalogo da file
-
-        try {
-            String contenutoFile = FileUtils.readFileToString(file, Charset.defaultCharset());
-
-            String[] prodottiStringa = contenutoFile.split("#");
-
-            for (String prodottoStringa : prodottiStringa) {
-                String[] attributi = prodottoStringa.split("@");
-
-
-                    if (attributi[0].equals("Libro")) {
-
-                        Libri libro = new Libri(attributi[1], attributi[2], LocalDate.parse(attributi[3]),
-                                Integer.parseInt(attributi[4]), attributi[5], attributi[6]);
-                        catalogo.aggiungiProdotto(libro);
-                    } else if (attributi[0].equals("Rivista")) {
-
-                        Riviste rivista = new Riviste(attributi[1], attributi[2], LocalDate.parse(attributi[3]),
-                                Integer.parseInt(attributi[4]), Periodicita.valueOf(attributi[5]));
-                        catalogo.aggiungiProdotto(rivista);
+        String stringaCatalogo = catalogo.getCatalogo().values().stream()
+                .map(elemento -> {
+                    if (elemento instanceof Libri) {
+                        return mapLibro((Libri) elemento);
+                    } else {
+                        return mapRivista((Riviste) elemento);
                     }
-                }
+                })
+                .collect(Collectors.joining("\n")); // Usiamo il carattere di nuova linea come delimitatore
 
-        } catch (IOException | CatalogoException e) {
-            logger.error(e.getMessage());
+        // Salvataggio su file
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            writer.write(stringaCatalogo);
+        } catch (IOException e) {
+            logger.error("Errore durante la scrittura su file: " + e.getMessage());
         }
+    }
 
-        System.out.println(catalogo);
+    // Funzione per mappare un libro
+    private static String mapLibro(Libri libro) {
+        return "Libro: " + libro.getTitolo() +
+                ", ISBN: " + libro.getCodiceISBN() +
+                ", Anno di pubblicazione: " + libro.getAnnoPubblicazione() +
+                ", Numero pagine: " + libro.getNumeroPagine() +
+                ", Autore: " + libro.getAutore() +
+                ", Genere: " + libro.getGenere();
+    }
+
+    // Funzione per mappare una rivista
+    private static String mapRivista(Riviste rivista) {
+        return  "Rivista: " + rivista.getTitolo() +
+                ", ISBN: " + rivista.getCodiceISBN() +
+                ", Anno di pubblicazione: " + rivista.getAnnoPubblicazione() +
+                ", Numero pagine: " + rivista.getNumeroPagine() +
+                ", Periodicità: " + rivista.getPeriodicita();
     }
 }
+
 
 

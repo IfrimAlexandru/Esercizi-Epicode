@@ -1,1 +1,6 @@
-Libro@LIsbn0004@Il signore degli anelli@2022-10-06@415@J.R.R. Tolkien@Fantasy#Libro@LIsbn0005@Shining@2023-10-06@454@Stephen King@Horror#Rivista@SIsbn0002@Forbes@2020-10-06@64@MENSILE#Libro@LIsbn0006@L'assassinio di Roger Ackroyd@2018-10-06@530@Agatha Christie@Thriller#Libro@LIsbn0007@Il guardiano degli innocenti@2017-04-14@650@Andrei Sapkowski@Fantasy#Rivista@SIsbn0003@Rolling Stones@2019-10-06@82@SETTIMANALE
+Libro: Il signore degli anelli, ISBN: LIsbn0004, Anno di pubblicazione: 2022-10-06, Numero pagine: 415, Autore: J.R.R. Tolkien, Genere: Fantasy
+Libro: Shining, ISBN: LIsbn0005, Anno di pubblicazione: 2023-10-06, Numero pagine: 454, Autore: Stephen King, Genere: Horror
+Rivista: Forbes, ISBN: SIsbn0002, Anno di pubblicazione: 2020-10-06, Numero pagine: 64, Periodicità: MENSILE
+Libro: L'assassinio di Roger Ackroyd, ISBN: LIsbn0006, Anno di pubblicazione: 2018-10-06, Numero pagine: 530, Autore: Agatha Christie, Genere: Thriller
+Libro: Il guardiano degli innocenti, ISBN: LIsbn0007, Anno di pubblicazione: 2017-04-14, Numero pagine: 650, Autore: Andrei Sapkowski, Genere: Fantasy
+Rivista: Rolling Stones, ISBN: SIsbn0003, Anno di pubblicazione: 2019-10-06, Numero pagine: 82, Periodicità: SETTIMANALE
