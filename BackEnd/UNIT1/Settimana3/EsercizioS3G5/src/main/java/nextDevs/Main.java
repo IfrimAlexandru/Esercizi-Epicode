@@ -23,8 +23,10 @@ public class Main {
         UtenteDAO utenteDao = new UtenteDAO(em);
         PrestitoDAO prestitoDao = new PrestitoDAO(em);
 
-        //****1.Aggiunta di un elemento del catalogo******;
-        // creo i libri
+        //******1.Aggiunta di un elemento del catalogo******;
+        System.out.println();
+        System.out.println("--------Aggiunta libri al catalogo--------");
+        System.out.println();
         Libri l1 = new Libri();
         l1.setCodiceISBN("La00001");
         l1.setTitolo("Guerra e Pace");
@@ -68,7 +70,9 @@ public class Main {
             System.err.println("Libro duplicato");
         }
 
-        // creo le riviste
+        System.out.println();
+        System.out.println("--------Aggiunta riviste al catalogo--------");
+        System.out.println();
         Riviste r1 = new Riviste();
         r1.setCodiceISBN("Ra00001");
         r1.setTitolo("Forbes");
@@ -108,7 +112,9 @@ public class Main {
             System.err.println("Rivista duplicato");
         }
 
-        // 2. Rimozione di un elemento del catalogo dato un codice ISBN
+        System.out.println();
+        System.out.println("--------Rimozione di un elemento del catalogo dato un codice ISBN--------");
+        System.out.println();
         try {
             ProdottoCatalogo prodottoCatalogo = prodottoDAO.getByIsbn("Ra00002");
             if (prodottoCatalogo != null) {
@@ -134,23 +140,33 @@ public class Main {
             System.err.println("Errore: " + e.getMessage());
         }
 
-        System.out.println("3. Ricerca per ISBN");
+        System.out.println();
+        System.out.println("--------Ricerca per ISBN--------");
+        System.out.println();
         ProdottoCatalogo findCatalogo = prodottoDAO.getByIsbn("La00002");
         System.out.println(findCatalogo);
 
-        System.out.println("4. Ricerca per anno pubblicazione");
+        System.out.println();
+        System.out.println("--------Ricerca per anno pubblicazione--------");
+        System.out.println();
         List<ProdottoCatalogo> cataloghiByYear = prodottoDAO.findByYear(2017);
         cataloghiByYear.forEach(System.out::println);
 
-        System.out.println("5. Ricerca per autore");
+        System.out.println();
+        System.out.println("--------Ricerca per autore--------");
+        System.out.println();
         List<ProdottoCatalogo> catalogoByAutore = prodottoDAO.findByAuthor("Alexandre Dumas");
         catalogoByAutore.forEach(System.out::println);
 
-        System.out.println("6. Ricerca per titolo o parte di esso");
+        System.out.println();
+        System.out.println("--------Ricerca per titolo o parte di esso--------");
+        System.out.println();
         List<ProdottoCatalogo> catalogoByTitle = prodottoDAO.findByTitle("risto");
         catalogoByTitle.forEach(System.out::println);
 
-        // creo gli utenti
+        System.out.println();
+        System.out.println("--------Creazione utenti--------");
+        System.out.println();
         Utente u1 = new Utente();
         u1.setNome("Alexandru");
         u1.setCognome("Ifrim");
@@ -184,7 +200,9 @@ public class Main {
             System.err.println("Utente duplicato");
         }
 
-        // Creazione prestiti
+        System.out.println();
+        System.out.println("--------Creazione prestiti--------");
+        System.out.println();
         Prestito pr1 = new Prestito();
         pr1.setUtente(utenteDao.getById(1));
         pr1.setDataInizioPrestito(LocalDate.now());
@@ -218,11 +236,15 @@ public class Main {
             System.err.println("Prestito duplicato");
         }
 
-        System.out.println("7. Ricerca degli elementi attualmente in prestito dato un numero di tessera utente");
+        System.out.println();
+        System.out.println("--------Ricerca degli elementi attualmente in prestito dato un numero di tessera utente--------");
+        System.out.println();
         List<ProdottoCatalogo> prodottiPrestito = prestitoDao.getProductFromId(2);
         prodottiPrestito.forEach(System.out::println);
 
-        System.out.println("8. Ricerca di tutti i prestiti scaduti e non ancora restituiti");
+        System.out.println();
+        System.out.println("--------Ricerca di tutti i prestiti scaduti e non ancora restituiti----------");
+        System.out.println();
         List<Prestito> prestitiNonRestituiti = prestitoDao.getPrestitoScadutoNonConsegnato();
         prestitiNonRestituiti.forEach(System.out::println);
 
