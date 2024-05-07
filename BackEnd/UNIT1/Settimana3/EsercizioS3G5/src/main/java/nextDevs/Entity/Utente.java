@@ -63,4 +63,11 @@ public class Utente {
     public void setNumeroDiTessera(Integer numeroDiTessera) {
         this.numeroDiTessera = numeroDiTessera;
     }
+
+    @Override
+    public String toString() {
+        return
+                "Nome: '" + nome + '\'' +
+                ", Cognome: '" + cognome + '\'';
+    }
 }

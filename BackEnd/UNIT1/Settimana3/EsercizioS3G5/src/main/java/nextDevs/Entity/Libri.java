@@ -38,9 +38,10 @@ public class Libri extends ProdottoCatalogo {
 
     @Override
     public String toString() {
-        return "Libri{" +
-                "autore='" + autore + '\'' +
-                ", genere='" + genere + '\'' +
+        return "Libro {" +
+                "Autore: '" + autore + '\'' +
+                ", Genere: '" + genere +  '\'' +
+                ", Titolo: '" + getTitolo() +  '\'' +
                 '}';
     }
 }

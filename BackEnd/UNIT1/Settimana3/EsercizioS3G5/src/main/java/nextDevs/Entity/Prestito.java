@@ -81,4 +81,16 @@ public class Prestito {
     public void setProdottoCatalogo(ProdottoCatalogo prodottoCatalogo) {
         this.prodottoCatalogo = prodottoCatalogo;
     }
+
+    @Override
+    public String toString() {
+        return "Prestito {" +
+                "Id: " + id +
+                ", Utente: " + utente +
+                ", Prodotto:" + prodottoCatalogo +
+                ", Data Inizio Prestito: " + dataInizioPrestito +
+                ", Data Restituzione Prevista: " + dataRestituzionePrevista +
+                ", Data Restituzione Effettiva: " + dataRestituzioneEffettiva +
+                '}';
+    }
 }

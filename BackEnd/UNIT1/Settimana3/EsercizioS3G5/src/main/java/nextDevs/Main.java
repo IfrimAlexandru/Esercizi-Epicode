@@ -23,14 +23,14 @@ public class Main {
         UtenteDAO utenteDao = new UtenteDAO(em);
         PrestitoDAO prestitoDao = new PrestitoDAO(em);
 
-        
+
         System.out.println();
         System.out.println("--------Aggiunta libri al catalogo--------");
         System.out.println();
         Libri l1 = new Libri();
         l1.setCodiceISBN("La00001");
         l1.setTitolo("Guerra e Pace");
-        l1.setAnnoPubblicazione(2014);
+        l1.setAnnoPubblicazione(1867);
         l1.setNumeroPagine(557);
         l1.setAutore("Lev Tolstoj");
         l1.setGenere("Romanzo storico");
@@ -45,8 +45,8 @@ public class Main {
         Libri l2 = new Libri();
         l2.setCodiceISBN("La00002");
         l2.setTitolo("Il ritratto di Dorian Gray");
-        l2.setAnnoPubblicazione(2017);
-        l2.setNumeroPagine(180);
+        l2.setAnnoPubblicazione(1890);
+        l2.setNumeroPagine(240);
         l2.setAutore("Oscar Wilde");
         l2.setGenere("Narrativa filosofica");
         try {
@@ -59,8 +59,8 @@ public class Main {
         Libri l3 = new Libri();
         l3.setCodiceISBN("La00003");
         l3.setTitolo("Il conte di Montecristo");
-        l3.setAnnoPubblicazione(2020);
-        l3.setNumeroPagine(250);
+        l3.setAnnoPubblicazione(1884);
+        l3.setNumeroPagine(336);
         l3.setAutore("Alexandre Dumas");
         l3.setGenere("Romanzo");
         try {
@@ -91,7 +91,7 @@ public class Main {
         r2.setTitolo("National Geographic Magazine");
         r2.setNumeroPagine(30);
         r2.setPeriodicita(Periodicita.SETTIMANALE);
-        r2.setAnnoPubblicazione(2014);
+        r2.setAnnoPubblicazione(2013);
         try {
             rivistaDao.save(r2);
             System.out.println("Rivista salvato con successo");
@@ -104,7 +104,7 @@ public class Main {
         r3.setTitolo("Focus");
         r3.setNumeroPagine(25);
         r3.setPeriodicita(Periodicita.ANNUALE);
-        r3.setAnnoPubblicazione(2014);
+        r3.setAnnoPubblicazione(2012);
         try {
             rivistaDao.save(r3);
             System.out.println("Rivista salvato con successo");
@@ -127,18 +127,15 @@ public class Main {
             System.err.println("Errore: " + e.getMessage());
         }
 
-        try {
+
             ProdottoCatalogo prodottoCatalogo = prodottoDAO.getByIsbn("5435");
             if (prodottoCatalogo != null) {
                 prodottoDAO.delete(prodottoCatalogo);
                 System.out.println("Prodotto eliminato");
             } else {
-                throw new RuntimeException("Prodotto inesistente");
+                System.out.println("********Prodotto inesistente********");
             }
-        } catch (
-                Exception e) {
-            System.err.println("Errore: " + e.getMessage());
-        }
+
 
         System.out.println();
         System.out.println("--------Ricerca per ISBN--------");
@@ -149,7 +146,7 @@ public class Main {
         System.out.println();
         System.out.println("--------Ricerca per anno pubblicazione--------");
         System.out.println();
-        List<ProdottoCatalogo> cataloghiByYear = prodottoDAO.findByYear(2017);
+        List<ProdottoCatalogo> cataloghiByYear = prodottoDAO.findByYear(1890);
         cataloghiByYear.forEach(System.out::println);
 
         System.out.println();
@@ -226,7 +223,7 @@ public class Main {
         }
 
         Prestito pr3 = new Prestito();
-        pr3.setUtente(utenteDao.getById(2));
+        pr3.setUtente(utenteDao.getById(3));
         pr3.setDataInizioPrestito(LocalDate.now());
         pr3.setProdottoCatalogo(prodottoDAO.getByIsbn("La00003"));
         try {
@@ -239,7 +236,7 @@ public class Main {
         System.out.println();
         System.out.println("--------Ricerca degli elementi attualmente in prestito dato un numero di tessera utente--------");
         System.out.println();
-        List<ProdottoCatalogo> prodottiPrestito = prestitoDao.getProductFromId(2);
+        List<ProdottoCatalogo> prodottiPrestito = prestitoDao.getProductFromId(1);
         prodottiPrestito.forEach(System.out::println);
 
         System.out.println();
