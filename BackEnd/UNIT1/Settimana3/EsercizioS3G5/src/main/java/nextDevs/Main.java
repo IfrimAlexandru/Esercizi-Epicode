@@ -23,7 +23,7 @@ public class Main {
         UtenteDAO utenteDao = new UtenteDAO(em);
         PrestitoDAO prestitoDao = new PrestitoDAO(em);
 
-        //******1.Aggiunta di un elemento del catalogo******;
+        
         System.out.println();
         System.out.println("--------Aggiunta libri al catalogo--------");
         System.out.println();
