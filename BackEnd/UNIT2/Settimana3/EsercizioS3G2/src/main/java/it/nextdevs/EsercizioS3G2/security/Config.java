@@ -1,9 +1,8 @@
-package it.nextdevs.EsercizioS3G1.security;
+package it.nextdevs.EsercizioS3G2.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
-import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -18,25 +17,24 @@ import java.util.List;
 
 @Configuration
 @EnableWebSecurity
+@EnableMethodSecurity
 public class Config {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.formLogin(http->http.disable());
         httpSecurity.csrf(http->http.disable());
         httpSecurity.sessionManagement(http->http.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-        httpSecurity.cors(Customizer.withDefaults());
-
-        httpSecurity.authorizeHttpRequests(http->http.requestMatchers("/api/**").permitAll());
-        httpSecurity.authorizeHttpRequests(http->http.requestMatchers("/auth/**").permitAll());
+        //permette l'accesso a tutti dei servizi con endpoint /api/users e metodi get (naturalmente dopo l'autenticazione)
+//        httpSecurity.authorizeHttpRequests(http->http.requestMatchers(HttpMethod.GET,"/api/users").permitAll());
+//        httpSecurity.authorizeHttpRequests(http->http.requestMatchers(HttpMethod.POST,"/auth/**").permitAll());
         httpSecurity.authorizeHttpRequests(http->http.requestMatchers("/**").permitAll());
 
-
+        //nega l'accesso a qualsiasi servizio che non sia get e path /api/users
         httpSecurity.authorizeHttpRequests(http->http.requestMatchers("/**").denyAll());
         return httpSecurity.build();
     }
-
     @Bean
-    public PasswordEncoder getPasswordEncoder() {
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
@@ -52,4 +50,5 @@ public class Config {
         return source;
 
     }
+
 }
